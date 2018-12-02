@@ -23,8 +23,7 @@ Context c=this;
     public String[] columnHeaders= new String[]{"DishName","Quantity","Actual Price","Sales","profit/Loss"};
 
     private ArrayList<TableRow> trows= new ArrayList<TableRow>();//rows information and values
-    private int[] Totals;//total field at the footer:P
-
+    private int[] Totals;//total field at the footer
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
