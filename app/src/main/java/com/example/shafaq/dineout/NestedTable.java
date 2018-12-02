@@ -30,6 +30,7 @@ import java.util.ArrayList;
  * Purpose:Creates a pdf with the reporting table
  * Precondition: The sales calculations are done and dusted and so is logic for finding type of report
  * Postcondition: report.pdf
+ *
  */
 public class NestedTable {
     public  String DEST;

@@ -2,6 +2,7 @@ package com.example.shafaq.dineout;
 
 /**
  * Created by shafaq on 12/2/2018.
+
  */
 
 public class TableRow {

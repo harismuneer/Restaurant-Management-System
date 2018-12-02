@@ -21,7 +21,7 @@ Context c=this;
     public int numberOfColumns=5;
     public int[] columnWidths=new int[]{30 , 30,30 ,30 ,30};//width settng in px
     public String[] columnHeaders= new String[]{"DishName","Quantity","Actual Price","Sales","profit/Loss"};
-
+    //
     private ArrayList<TableRow> trows= new ArrayList<TableRow>();//rows information and values
     private int[] Totals;//total field at the footer
     @Override
