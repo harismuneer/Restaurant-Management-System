@@ -50,10 +50,6 @@ public class Tracking extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hall_activity_tracking);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        myToolbar.setTitle("");
-        //setSupportActionBar(myToolbar);
-
         mrecycleview = (RecyclerView) findViewById(R.id.list);
         RecyclerView.ItemDecoration itemDecoration = new
                 DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
@@ -85,23 +81,23 @@ public class Tracking extends AppCompatActivity {
         madapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
             @Override
             public void OnItemClick(int position) {
-                Toast.makeText(Tracking.this, "Single Click on position :"+position,Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(Tracking.this, "Single Click on position :"+position,Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void OnFreeClick(int position) {
-                Toast.makeText(Tracking.this, "Free Click on position :"+position,Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(Tracking.this, "Free Click on position :"+position,Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
             public void OnBookClick(int position) {
-                Toast.makeText(Tracking.this, "Paid Click on position :"+position,Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(Tracking.this, "Paid Click on position :"+position,Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void OnOccupyClick(int position) {
-                Toast.makeText(Tracking.this, "Occupy Click on position :"+position,Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(Tracking.this, "Occupy Click on position :"+position,Toast.LENGTH_SHORT).show();
             }
         });
     }

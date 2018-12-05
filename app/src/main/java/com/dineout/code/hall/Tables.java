@@ -59,10 +59,6 @@ public class Tables extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hall_activity_tables);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        myToolbar.setTitle("");
-        //setSupportActionBar(myToolbar);
-
         mrecycleview = (RecyclerView) findViewById(R.id.list);
         RecyclerView.ItemDecoration itemDecoration = new
                 DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
@@ -116,12 +112,12 @@ public class Tables extends AppCompatActivity {
         madapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
             @Override
             public void OnItemClick(int position) {
-                Toast.makeText(Tables.this, "Single Click on position :"+position,Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(Tables.this, "Single Click on position :"+position,Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void OnFreeClick(final int position) {
-                Toast.makeText(Tables.this, "Free Click on position :"+position,Toast.LENGTH_SHORT).show();
+               // Toast.makeText(Tables.this, "Free Click on position :"+position,Toast.LENGTH_SHORT).show();
                 mFirebaseDatabase2 = FirebaseDatabase.getInstance();
                 mtablereference2 = mFirebaseDatabase2.getReference("Table").child(tables.get(position).getTableID());
                 Table t = new Table(tables.get(position).getTableID(),"Free",tables.get(position).getCapacity());
@@ -157,7 +153,7 @@ public class Tables extends AppCompatActivity {
 
             @Override
             public void OnBookClick(int position) {
-                Toast.makeText(Tables.this, "Book Click on position :"+position,Toast.LENGTH_SHORT).show();
+               // Toast.makeText(Tables.this, "Book Click on position :"+position,Toast.LENGTH_SHORT).show();
                 Intent myIntent = new Intent(Tables.this, Tablets.class);
                 mFirebaseDatabase2 = FirebaseDatabase.getInstance();
                 mtablereference2 = mFirebaseDatabase2.getReference("Table").child(tables.get(position).getTableID());
@@ -169,7 +165,7 @@ public class Tables extends AppCompatActivity {
 
             @Override
             public void OnOccupyClick(int position) {
-                Toast.makeText(Tables.this, "Occupy Click on position :"+position,Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(Tables.this, "Occupy Click on position :"+position,Toast.LENGTH_SHORT).show();
                 Intent myIntent = new Intent(Tables.this, Tablets.class);
                 mFirebaseDatabase2 = FirebaseDatabase.getInstance();
                 mtablereference2 = mFirebaseDatabase2.getReference("Table").child(tables.get(position).getTableID());

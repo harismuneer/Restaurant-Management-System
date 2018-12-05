@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.dineout.code.admin.LoginActivity;
 import com.dineout.code.hall.DB.Assignment;
 import com.dineout.code.hall.DB.BillStatus;
 import com.dineout.code.hall.DB.Order;
@@ -53,9 +55,6 @@ public class ManagerInterface extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hall_activity_manager_interface);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_halltoolbar);
-        myToolbar.setTitle("");
-        //setSupportActionBar(myToolbar);
 
         button4 = (Button) findViewById(R.id.button4);
         button4.setOnClickListener(new View.OnClickListener() {
@@ -184,18 +183,7 @@ public class ManagerInterface extends AppCompatActivity {
        //     }
        // }
 
-        Button button11 = (Button) findViewById(R.id.button11);
-        button11.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View V) {
-                button8.setEnabled(true);
-                for(int i=0;i<Tables.size();i++) {
-                    DatabaseReference del = FirebaseDatabase.getInstance().getReference("Assignment").child(Tables.get(i+1).getTableID());
-                    del.removeValue();
-                }
-                Intent myIntent = new Intent(ManagerInterface.this, SelectUser.class);
-                startActivity(myIntent);
-            }
-        });
+
 
         Button button12 = (Button) findViewById(R.id.button12);
         button12.setOnClickListener(new View.OnClickListener() {
@@ -206,5 +194,30 @@ public class ManagerInterface extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.options_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(android.view.MenuItem item) {
+        if(item.getItemId() == R.id.logout){
+            button8.setEnabled(true);
+            for(int i=1;i<Tables.size();i++) {
+                DatabaseReference del = FirebaseDatabase.getInstance().getReference("Assignment").child(Tables.get(i).getTableID());
+                del.removeValue();
+            }
+            Intent intent;
+            intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        else {
+            return super.onOptionsItemSelected(item);
+        }
     }
 }

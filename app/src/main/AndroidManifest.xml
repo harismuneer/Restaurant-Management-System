@@ -74,17 +74,7 @@
 
         <!--Hall Management Module-->
         <activity
-            android:name=".code.hall.Welcome"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name=".code.hall.SelectUser"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".code.hall.TableSetup"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".code.hall.EmployeeLogin"
             android:screenOrientation="portrait" />
         <activity
             android:name=".code.hall.ManagerInterface"
