@@ -67,7 +67,7 @@ public class ManagerInterface extends AppCompatActivity {
         Button button5 = (Button) findViewById(R.id.button5);
         button5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View V) {
-                Intent myIntent = new Intent(ManagerInterface.this,ReceivePayment.class);
+                Intent myIntent = new Intent(ManagerInterface.this,com.dineout.code.billing.PendingPayments.class);
                 startActivity(myIntent);
             }
         });
