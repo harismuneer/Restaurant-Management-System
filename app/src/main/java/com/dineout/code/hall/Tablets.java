@@ -59,7 +59,7 @@ public class Tablets extends AppCompatActivity {
         setContentView(R.layout.hall_activity_tablets);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         myToolbar.setTitle("");
-        setSupportActionBar(myToolbar);
+        //setSupportActionBar(myToolbar);
 
         mrecycleview = (RecyclerView) findViewById(R.id.list);
         RecyclerView.ItemDecoration itemDecoration = new

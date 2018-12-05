@@ -46,7 +46,7 @@ public class EmployeeLogin extends AppCompatActivity {
         setContentView(R.layout.hall_activity_employee_login);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         myToolbar.setTitle("");
-        setSupportActionBar(myToolbar);
+        //setSupportActionBar(myToolbar);
 
         email = (AutoCompleteTextView) findViewById(R.id.email);
         pass = (EditText) findViewById(R.id.password);

@@ -53,9 +53,9 @@ public class ManagerInterface extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hall_activity_manager_interface);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_halltoolbar);
         myToolbar.setTitle("");
-        setSupportActionBar(myToolbar);
+        //setSupportActionBar(myToolbar);
 
         button4 = (Button) findViewById(R.id.button4);
         button4.setOnClickListener(new View.OnClickListener() {

@@ -51,7 +51,7 @@ public class ViewCompletedOrders extends AppCompatActivity {
         setContentView(R.layout.hall_activity_view_completed_orders);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         myToolbar.setTitle("");
-        setSupportActionBar(myToolbar);
+        //setSupportActionBar(myToolbar);
 
         mrecycleview = (RecyclerView) findViewById(R.id.list);
         RecyclerView.ItemDecoration itemDecoration = new

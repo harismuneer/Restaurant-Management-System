@@ -15,6 +15,6 @@ public class TableSetup extends AppCompatActivity {
         setContentView(R.layout.hall_activity_table_setup);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         myToolbar.setTitle("");
-        setSupportActionBar(myToolbar);
+        //setSupportActionBar(myToolbar);
     }
 }
