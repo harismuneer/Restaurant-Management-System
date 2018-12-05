@@ -55,14 +55,14 @@ public class RecyclerViewAdapterCookList extends RecyclerView.Adapter<RecyclerVi
 
                 MainActivity.mChefs.get(position).getChefQueue().
                         add(MainActivity.mChefs.get(chefNo).getChefQueue().get(itemNo));
-                //((MainActivity)mContext).reinitializeCookAdapter();/////////////
+                //((dummyActivity)mContext).reinitializeCookAdapter();/////////////
 
                 MainActivity.mChefs.get(chefNo).getChefQueue().remove(itemNo);
 
                 MainActivity.adapter.notifyDataSetChanged();
                 Toast.makeText(mContext, mChefs.get(position).getName() + " has been assigned the dish", Toast.LENGTH_SHORT).show();
-                // MainActivity.selected = true;
-                // MainActivity.mChefs = mChefs;
+                // dummyActivity.selected = true;
+                // dummyActivity.mChefs = mChefs;
 
                 //Intent inte = new Intent();
                 //activity.setResult(Activity.RESULT_OK);/*, inte);*/
@@ -85,9 +85,9 @@ public class RecyclerViewAdapterCookList extends RecyclerView.Adapter<RecyclerVi
                 MainActivity.adapter.notifyDataSetChanged();
                 Toast.makeText(mContext, mChefs.get(position).getName() + " has been assigned the dish", Toast.LENGTH_SHORT).show();
 
-               // ((MainActivity)mContext).reinitializeCookAdapter();/////////////
-                // MainActivity.selected = true;
-                // MainActivity.mChefs = mChefs;
+               // ((dummyActivity)mContext).reinitializeCookAdapter();/////////////
+                // dummyActivity.selected = true;
+                // dummyActivity.mChefs = mChefs;
 
                 //activity.setResult(Activity.RESULT_OK);
                 activity.finish();

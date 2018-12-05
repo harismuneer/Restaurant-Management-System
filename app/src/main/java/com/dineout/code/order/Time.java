@@ -109,17 +109,17 @@ public class Time extends AppCompatActivity {
 
     private void RediectToUpdateOrder(View v)
     {
-        startActivity(new Intent(Time.this,Time.class));  // changed to that interface
+        //startActivity(new Intent(Time.this,Time.class));  // changed to that interface
     }
 
     private void RediectToCancelOrder(View v)
     {
-        startActivity(new Intent(Time.this,Time.class));  // changed to that interface
+        //startActivity(new Intent(Time.this,Time.class));  // changed to that interface
     }
 
     private void RediectToGenerateBill(View v)
     {
-        startActivity(new Intent(Time.this,Time.class));  // changed to that interface
+        startActivity(new Intent(Time.this, com.dineout.code.billing.ConfirmPayment.class));  // changed to that interface
     }
 
 

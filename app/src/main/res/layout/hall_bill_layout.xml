@@ -1,116 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="4dp"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:elevation="12dp">
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp" android:paddingLeft="10dp" android:paddingRight="10dp" android:elevation="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/Tableid203"
+        android:id="@+id/Tableid3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
         android:layout_marginLeft="10dp"
         android:text="Table Id: "
-        android:textSize="20dp" />
+        android:textSize="20dp"/>
 
     <TextView
-        android:id="@+id/TID200"
+        android:id="@+id/TID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
-        android:layout_toEndOf="@+id/Tableid203"
-        android:layout_toRightOf="@+id/Tableid203"
+        android:layout_toEndOf="@+id/Tableid3"
+        android:layout_toRightOf="@+id/Tableid3"
         android:layout_marginTop="9dp"
         android:text="1"
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/orderid200"
+        android:id="@+id/orderid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OrderID: "
         android:layout_marginLeft="10dp"
-        android:layout_below="@id/Tableid203"
-        android:textSize="20dp" />
+        android:layout_below="@id/Tableid3"
+        android:textSize="20dp"/>
 
     <TextView
-        android:id="@+id/OID200"
+        android:id="@+id/OID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
-        android:layout_below="@+id/TID200"
+        android:layout_below="@+id/TID"
         android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/orderid200"
-        android:layout_toRightOf="@+id/orderid200"
+        android:layout_toEndOf="@+id/orderid"
+        android:layout_toRightOf="@+id/orderid"
         android:text="4"
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/bill200"
+        android:id="@+id/bill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bill Amount: "
         android:layout_marginLeft="10dp"
-        android:layout_below="@id/orderid200"
-        android:textSize="20dp" />
+        android:layout_below="@id/orderid"
+        android:textSize="20dp"/>
 
     <TextView
-        android:id="@+id/amount200"
+        android:id="@+id/amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/OID200"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
+        android:layout_below="@+id/OID"
         android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/bill200"
-        android:layout_toRightOf="@+id/bill200"
+        android:layout_toEndOf="@+id/bill"
+        android:layout_toRightOf="@+id/bill"
         android:text="400"
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/status200"
+        android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Status: "
         android:layout_marginLeft="10dp"
-        android:layout_below="@id/bill200"
-        android:textSize="20dp" />
+        android:layout_below="@id/bill"
+        android:textSize="20dp"/>
 
     <TextView
-        android:id="@+id/s200"
+        android:id="@+id/s"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/bill200"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
+        android:layout_below="@+id/bill"
         android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/status200"
-        android:layout_toRightOf="@+id/status200"
+        android:layout_toEndOf="@+id/status"
+        android:layout_toRightOf="@+id/status"
         android:text="Unpaid"
-        android:textSize="20dp" />
+        android:textSize="18dp" />
 
     <Button
-        android:id="@+id/Paid200"
+        android:id="@+id/Paid"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="118dp"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="100dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="25dp"
-        android:layout_toEndOf="@+id/OID200"
-        android:layout_toRightOf="@+id/OID200"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:fontFamily="serif"
+        android:layout_toEndOf="@+id/OID"
+        android:layout_toRightOf="@+id/OID"
         android:text="Paid"
         android:textSize="12dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"  />
 
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/payorderdishes"
+            android:nestedScrollingEnabled="true">
+        </ListView>
+
+    </LinearLayout>
 
 </RelativeLayout>

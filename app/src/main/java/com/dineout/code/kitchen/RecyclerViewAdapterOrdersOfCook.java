@@ -140,7 +140,7 @@ public class RecyclerViewAdapterOrdersOfCook extends RecyclerView.Adapter<OrderV
                                             //Three variables required are enteredQuantity, servings, orderId, dishname
 
                                             if(enteredQuantity == servings){
-                                                //MainActivity.updateDishStatus(mData.get(position), MainActivity.READY);
+                                                //dummyActivity.updateDishStatus(mData.get(position), dummyActivity.READY);
                                                 MainActivity.removeOrderDetailsFromDb(mData.get(position));
                                                 mData.remove(position);
                                             }
@@ -233,7 +233,7 @@ public class RecyclerViewAdapterOrdersOfCook extends RecyclerView.Adapter<OrderV
         intent.putExtra("cookNo", mCookNo);
         //Toast.makeText(mContext, mCookNo + "", Toast.LENGTH_SHORT).show();
         ((Activity)mContext).startActivityForResult(intent, 345);
-       // ((MainActivity)mContext).startActivityForResult(intent, 70);
+       // ((dummyActivity)mContext).startActivityForResult(intent, 70);
         // Toast.makeText(mContext, mCookNo + "", Toast.LENGTH_SHORT).show();
     }
 
@@ -246,7 +246,7 @@ public class RecyclerViewAdapterOrdersOfCook extends RecyclerView.Adapter<OrderV
             holder.button.setVisibility(View.INVISIBLE);
             holder.itemView.setBackgroundColor(Color.parseColor("#ffeee0"));
 
-           // mData.get(position).setStatus(MainActivity.READY);
+           // mData.get(position).setStatus(dummyActivity.READY);
             MainActivity.updateDishStatus(mData.get(position), MainActivity.COOKING);
             MainActivity.updateOrderStatusCooking(mData.get(position).getOrderid());
             Collections.sort(mData, new OrderComparator());

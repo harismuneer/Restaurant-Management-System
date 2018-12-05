@@ -54,7 +54,7 @@ String dummy=null;
             @Override
             public void onItemClick(AdapterView<?>parent,View view,int position,long id){
 
-                //startActivity(new Intent(MainActivity.this, setQuantity.class));
+                //startActivity(new Intent(dummyActivity.this, setQuantity.class));
             }
         });
         DatabaseReference ref= FirebaseDatabase.getInstance().getReference().child("cart");

@@ -6,16 +6,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
-import com.dineout.R;
-
-
-import com.dineout.code.hall.DB.Table;
 import com.dineout.code.hall.DB.Assignment;
 import com.dineout.code.hall.DB.BillStatus;
 import com.dineout.code.hall.DB.Order;
+import com.dineout.code.hall.DB.OrderDetails;
+import com.dineout.code.hall.DB.Table;
 import com.dineout.code.hall.DB.Tablet;
+import com.dineout.code.hall.DB.Receipt;
+import com.dineout.code.hall.DB.Employee;
+import com.dineout.code.hall.DB.Item;
+import com.dineout.code.hall.DB.MenuItem;
+import com.dineout.code.hall.DB.Menu;
+
+import com.dineout.R;
+
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -42,9 +49,9 @@ public class ViewCompletedOrders extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hall_activity_view_completed_orders);
-        //  Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        // myToolbar.setTitle("");
-        //setSupportActionBar(myToolbar);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        myToolbar.setTitle("");
+        setSupportActionBar(myToolbar);
 
         mrecycleview = (RecyclerView) findViewById(R.id.list);
         RecyclerView.ItemDecoration itemDecoration = new
@@ -53,20 +60,20 @@ public class ViewCompletedOrders extends AppCompatActivity {
         mrecycleview.setLayoutManager(new LinearLayoutManager(this));
 
 
-        o = new Order();
+        o= new Order();
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mtablereference = mFirebaseDatabase.getReference("Order");//.child("notification").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         mtablereference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    o = ds.getValue(Order.class);
-                    if (o.getStatus() == 4) {
+                serveorder.clear();
+                for(DataSnapshot ds: dataSnapshot.getChildren()) {
+                    o=ds.getValue(Order.class);
+                    if(o.getStatus() == 4) {
                         serveorder.add(o);
                     }
-                    madapter.notifyDataSetChanged();
-
                 }
+                madapter.notifyDataSetChanged();
             }
 
             @Override
@@ -75,28 +82,28 @@ public class ViewCompletedOrders extends AppCompatActivity {
             }
         });
 
-        madapter = new Adapter(this, 5, tables, tablets, billstatus, serveorder, track);
+        madapter = new Adapter(this,5, tables,tablets, billstatus, serveorder, track);
         mrecycleview.setAdapter(madapter);
         madapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
             @Override
             public void OnItemClick(int position) {
-                Toast.makeText(ViewCompletedOrders.this, "Single Click on position :" + position, Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
             public void OnFreeClick(int position) {
-                Toast.makeText(ViewCompletedOrders.this, "Free Click on position :" + position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ViewCompletedOrders.this, "Free Click on position :"+position,Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
             public void OnBookClick(int position) {
-                Toast.makeText(ViewCompletedOrders.this, "Served Click on position :" + position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ViewCompletedOrders.this, "Served Click on position :"+position,Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void OnOccupyClick(int position) {
-                Toast.makeText(ViewCompletedOrders.this, "Occupy Click on position :" + position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ViewCompletedOrders.this, "Occupy Click on position :"+position,Toast.LENGTH_SHORT).show();
             }
 
         });

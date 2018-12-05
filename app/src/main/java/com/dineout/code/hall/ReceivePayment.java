@@ -6,16 +6,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
-import com.dineout.R;
-
-import com.dineout.code.hall.DB.Table;
 import com.dineout.code.hall.DB.Assignment;
 import com.dineout.code.hall.DB.BillStatus;
 import com.dineout.code.hall.DB.Order;
+import com.dineout.code.hall.DB.OrderDetails;
+import com.dineout.code.hall.DB.Table;
 import com.dineout.code.hall.DB.Tablet;
 import com.dineout.code.hall.DB.Receipt;
+import com.dineout.code.hall.DB.Employee;
+import com.dineout.code.hall.DB.Item;
+import com.dineout.code.hall.DB.MenuItem;
+import com.dineout.code.hall.DB.Menu;
+
+import com.dineout.R;
 
 
 import com.google.firebase.database.DataSnapshot;
@@ -25,8 +31,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-
-//ramsha had to add new code
 
 public class ReceivePayment extends AppCompatActivity {
     private RecyclerView mrecycleview;
@@ -52,10 +56,9 @@ public class ReceivePayment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hall_activity_receive_payment);
-        //   Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        //myToolbar.setTitle("");
-        //   setSupportActionBar(myToolbar);
-
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        myToolbar.setTitle("");
+        setSupportActionBar(myToolbar);
 
         mrecycleview = (RecyclerView) findViewById(R.id.list);
         RecyclerView.ItemDecoration itemDecoration = new
@@ -63,61 +66,84 @@ public class ReceivePayment extends AppCompatActivity {
         mrecycleview.addItemDecoration(itemDecoration);
         mrecycleview.setLayoutManager(new LinearLayoutManager(this));
 
-        System.out.println("entered");
-        o = new Order();
+        o= new Order();
+        r= new Receipt();
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mtablereference = mFirebaseDatabase.getReference("Order");//.child("notification").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         mtablereference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    o = ds.getValue(Order.class);
-                    if (o.getStatus() == 3) {
-                        System.out.println("entered2");
+                serveorder.clear();
+                billstatus.clear();
+                for(DataSnapshot ds: dataSnapshot.getChildren()) {
+                    o=ds.getValue(Order.class);
+                    if(o.getStatus() == 3 && !serveorder.contains(o)) {
                         serveorder.add(o);
-                        madapter.notifyDataSetChanged();
                     }
-
-
                 }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-        r = new Receipt();
-
-        mFirebaseDatabase2 = FirebaseDatabase.getInstance();
-        mtablereference2 = mFirebaseDatabase2.getReference("Receipt");//.child("notification").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-        mtablereference2.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    System.out.println("hmm" + serveorder.size());
-                    r = ds.getValue(Receipt.class);
-                    if (r.getPaid() == 0) {
-                        System.out.println("entered3");
-                        for (int i = 0; i < serveorder.size(); i++) {
-                            if (serveorder.get(i).getId().equals(r.getOrderid())) {
-                                System.out.println("found");
-                                bs = new BillStatus();
-                                bs.setTableID(serveorder.get(i).getTableID());
-                                bs.setStatus(serveorder.get(i).getTimestamp());
-                                bs.setOrderID(r.getOrderid());
-                                bs.setAmount(r.getTotalamount());
-                                billstatus.add(bs);
-
-                                //break;
+                mFirebaseDatabase2 = FirebaseDatabase.getInstance();
+                mFirebaseDatabase2.getReference("Receipt").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                            r = ds.getValue(Receipt.class);
+                            if (r.getPaid() == 0) {
+                                for(int i=0;i<serveorder.size();i++)
+                                {
+                                    if(r.getOrderid().compareTo(serveorder.get(i).getId())==0) {
+                                        bs = new BillStatus();
+                                        bs.setTableID(o.getTableID());
+                                        bs.setStatus(o.getTimestamp());
+                                        bs.setOrderID(r.getOrderid());
+                                        bs.setAmount(r.getTotalamount());
+                                        billstatus.add(bs);
+                                    }
+                                }
                             }
                         }
-                        madapter.notifyDataSetChanged();
-                    }
-                    //
 
-                }
+                        madapter = new Adapter(ReceivePayment.this, 1, tables, tablets, billstatus, serveorder, track);
+                        mrecycleview.setAdapter(madapter);
+                        madapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
+                            @Override
+                            public void OnItemClick(int position) {
+
+                            }
+
+                            @Override
+                            public void OnFreeClick(int position) {
+                                Toast.makeText(ReceivePayment.this, "Free Click on position :"+position,Toast.LENGTH_SHORT).show();
+
+                            }
+
+                            @Override
+                            public void OnBookClick(int position) {
+                                Toast.makeText(ReceivePayment.this, "Paid Click on position :"+position,Toast.LENGTH_SHORT).show();
+                                mFirebaseDatabase3 = FirebaseDatabase.getInstance();
+                                mtablereference3 = mFirebaseDatabase3.getReference("Order").child(billstatus.get(position).getOrderID());
+                                Order order=new Order(billstatus.get(position).getTableID(), billstatus.get(position).getOrderID(),4, billstatus.get(position).getStatus());
+                                mtablereference3.setValue(order);
+
+                                mFirebaseDatabase4 = FirebaseDatabase.getInstance();
+                                mtablereference4 = mFirebaseDatabase4.getReference("Receipt").child(billstatus.get(position).getOrderID());
+                                Receipt receipt=new Receipt(billstatus.get(position).getOrderID(), 1, billstatus.get(position).getAmount());
+                                mtablereference4.setValue(receipt);
+                            }
+
+                            @Override
+                            public void OnOccupyClick(int position) {
+                                Toast.makeText(ReceivePayment.this, "Occupy Click on position :"+position,Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
             }
 
             @Override
@@ -125,39 +151,6 @@ public class ReceivePayment extends AppCompatActivity {
 
             }
         });
-        System.out.println("entered4");
-        madapter = new Adapter(this, 1, tables, tablets, billstatus, serveorder, track);
-        mrecycleview.setAdapter(madapter);
-        madapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
-            @Override
-            public void OnItemClick(int position) {
-                Toast.makeText(ReceivePayment.this, "Single Click on position :" + position, Toast.LENGTH_SHORT).show();
-            }
 
-            @Override
-            public void OnFreeClick(int position) {
-                Toast.makeText(ReceivePayment.this, "Free Click on position :" + position, Toast.LENGTH_SHORT).show();
-
-            }
-
-            @Override
-            public void OnBookClick(int position) {
-                Toast.makeText(ReceivePayment.this, "Paid Click on position :" + position, Toast.LENGTH_SHORT).show();
-                //  mFirebaseDatabase3 = FirebaseDatabase.getInstance();
-                //  mtablereference3 = mFirebaseDatabase3.getReference("Order").child(billstatus.get(position).getOrderID());
-                //  Order order=new Order(billstatus.get(position).getTableID(), billstatus.get(position).getOrderID(),4, billstatus.get(position).getStatus());
-                //  mtablereference3.setValue(order);
-
-                //   mFirebaseDatabase4 = FirebaseDatabase.getInstance();
-                //   mtablereference4 = mFirebaseDatabase4.getReference("Receipt").child(billstatus.get(position).getOrderID());
-                //  Receipt receipt=new Receipt(billstatus.get(position).getOrderID(), 1, billstatus.get(position).getAmount());
-                //  mtablereference4.setValue(receipt);
-            }
-
-            @Override
-            public void OnOccupyClick(int position) {
-                Toast.makeText(ReceivePayment.this, "Occupy Click on position :" + position, Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 }

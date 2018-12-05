@@ -1,109 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="4dp"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:elevation="12dp">
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp" android:paddingLeft="10dp" android:paddingRight="10dp" android:elevation="12dp">
 
     <TextView
-        android:id="@+id/Tableid200"
+        android:id="@+id/Tableid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
         android:text="Id: "
         android:textSize="20dp" />
 
-    <TextView
-        android:id="@+id/id200"
+   <TextView
+        android:id="@+id/id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
-        android:layout_toEndOf="@+id/Tableid200"
-        android:layout_toRightOf="@+id/Tableid200"
+        android:layout_toEndOf="@+id/Tableid"
+        android:layout_toRightOf="@+id/Tableid"
         android:layout_marginTop="9dp"
         android:text="1"
         android:textSize="20dp" />
 
-    <TextView
-        android:id="@+id/TableCapacity200"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Tableid200"
-        android:text="Capacity: "
-        android:layout_marginTop="0dp"
-        android:textSize="20dp" />
+       <TextView
+           android:id="@+id/TableCapacity"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/Tableid"
+           android:text="Capacity: "
+           android:layout_marginTop="0dp"
+           android:textSize="20dp" />
 
-    <TextView
-        android:id="@+id/Capacity200"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/id200"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/TableCapacity200"
-        android:layout_toRightOf="@+id/TableCapacity200"
-        android:text="4"
-        android:textSize="20dp" />
+       <TextView
+           android:id="@+id/Capacity"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="10dp"
+           android:layout_marginStart="10dp"
+           android:layout_below="@+id/id"
+           android:layout_marginTop="0dp"
+           android:layout_toEndOf="@+id/TableCapacity"
+           android:layout_toRightOf="@+id/TableCapacity"
+           android:text="4"
+           android:textSize="20dp" />
 
 
-    <ImageView
-        android:id="@+id/imageView200"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_alignEnd="@+id/occupied200"
-        android:layout_alignRight="@+id/occupied200"
-        android:layout_alignTop="@+id/id200"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/occupy" />
+       <ImageView
+           android:id="@+id/imageView2"
+           android:layout_width="130dp"
+           android:layout_height="50dp"
+           android:layout_alignEnd="@+id/occupied"
+           android:layout_alignRight="@+id/occupied"
+           android:layout_alignTop="@+id/id"
+           android:scaleType="fitXY"
+           app:srcCompat="@drawable/occupy" />
 
-    <Button
-        android:id="@+id/booking200"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="118dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/TableCapacity200"
-        android:layout_marginTop="0dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:fontFamily="serif"
-        android:text="Book"
-        android:textSize="12dp"
-        android:textStyle="bold" />
+       <Button
+           android:id="@+id/booking"
+           style="@style/Widget.AppCompat.Button.Colored"
+           android:layout_width="118dp"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/TableCapacity"
+           android:layout_marginTop="0dp"
+           android:backgroundTint="@android:color/holo_orange_dark"
+           android:fontFamily="serif"
+           android:text="Book"
+           android:textSize="12dp"
+           android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/free200"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="118dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:fontFamily="serif"
-        android:text="Free"
-        android:textSize="12dp"
-        android:textStyle="bold"
-        android:layout_below="@+id/TableCapacity200"
-        android:layout_toEndOf="@+id/booking200"
-        android:layout_toRightOf="@+id/booking200" />
+       <Button
+           android:id="@+id/free"
+           style="@style/Widget.AppCompat.Button.Colored"
+           android:layout_width="118dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="0dp"
+           android:backgroundTint="@android:color/holo_orange_dark"
+           android:fontFamily="serif"
+           android:text="Free"
+           android:textSize="12dp"
+           android:textStyle="bold"
+           android:layout_below="@+id/TableCapacity"
+           android:layout_toEndOf="@+id/booking"
+           android:layout_toRightOf="@+id/booking" />
 
-    <Button
-        android:id="@+id/occupied200"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="118dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:fontFamily="serif"
-        android:text="Occupy"
-        android:textSize="12dp"
-        android:textStyle="bold"
-        android:layout_below="@+id/TableCapacity200"
-        android:layout_toEndOf="@+id/free200"
-        android:layout_toRightOf="@+id/free200" />
+       <Button
+           android:id="@+id/occupied"
+           style="@style/Widget.AppCompat.Button.Colored"
+           android:layout_width="118dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="0dp"
+           android:backgroundTint="@android:color/holo_orange_dark"
+           android:fontFamily="serif"
+           android:text="Occupy"
+           android:textSize="12dp"
+           android:textStyle="bold"
+           android:layout_below="@+id/TableCapacity"
+           android:layout_toEndOf="@+id/free"
+           android:layout_toRightOf="@+id/free" />
+
+
 
 
 </RelativeLayout>

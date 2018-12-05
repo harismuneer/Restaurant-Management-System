@@ -6,13 +6,35 @@
     android:layout_height="match_parent"
     tools:context="com.example.khalid.lettuceeat.ManagerInterface">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/holo_orange_dark"
+        app:popupTheme="@style/PopupOverlay">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/Widget.AppCompat.TextView.SpinnerItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="Lettuce Eat"
+            android:textColor="@android:color/white"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="11dp" />
+
+    </android.support.v7.widget.Toolbar>
+
     <TextView
-        android:id="@+id/ManagerInterfacetextView204"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="serif"
         android:text="What do you want to do?"
         android:textAlignment="center"
@@ -20,12 +42,12 @@
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
 
     <Button
-        android:id="@+id/ManagerInterfacebutton204"
+        android:id="@+id/button4"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
@@ -42,10 +64,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ManagerInterfacetextView204" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
-        android:id="@+id/ManagerInterfacebutton205"
+        android:id="@+id/button5"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
@@ -63,11 +85,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ManagerInterfacebutton204"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/ManagerInterfacebutton206"
+        android:id="@+id/button6"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
@@ -85,11 +107,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ManagerInterfacebutton205"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/ManagerInterfacebutton207"
+        android:id="@+id/button7"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
@@ -107,11 +129,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ManagerInterfacebutton206"
+        app:layout_constraintTop_toBottomOf="@+id/button6"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/ManagerInterfacebutton208"
+        android:id="@+id/button8"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
@@ -129,11 +151,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ManagerInterfacebutton207"
+        app:layout_constraintTop_toBottomOf="@+id/button7"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/ManagerInterfacebutton209"
+        android:id="@+id/button9"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
@@ -151,7 +173,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ManagerInterfacebutton208"
+        app:layout_constraintTop_toBottomOf="@+id/button8"
         app:layout_constraintVertical_bias="0.0" />
 
     <!--  <Button
@@ -176,8 +198,25 @@
           app:layout_constraintTop_toBottomOf="@+id/button9"
           app:layout_constraintVertical_bias="0.0" /> -->
 
+      <Button
+          android:id="@+id/button11"
+          android:layout_width="wrap_content"
+          android:layout_height="38dp"
+          android:layout_marginBottom="8dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="9dp"
+          android:backgroundTint="@android:color/white"
+          android:text="LogOut"
+          app:layout_constraintBottom_toBottomOf="@+id/textView4"
+          app:layout_constraintEnd_toEndOf="@+id/my_toolbar"
+          app:layout_constraintHorizontal_bias="0.971"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.0" />
+
     <Button
-        android:id="@+id/ManagerInterfacebutton212"
+        android:id="@+id/button12"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
@@ -195,7 +234,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ManagerInterfacebutton209"
+        app:layout_constraintTop_toBottomOf="@+id/button9"
         app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

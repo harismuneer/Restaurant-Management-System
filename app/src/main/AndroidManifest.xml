@@ -2,6 +2,8 @@
     package="com.dineout">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 
     <application
@@ -72,37 +74,37 @@
 
         <!--Hall Management Module-->
         <activity
+            android:name=".code.hall.Welcome"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".code.hall.SelectUser"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".code.hall.TableSetup"
-            android:screenOrientation="portrait"
-            android:label="Hall Manager" />
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".code.hall.EmployeeLogin"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".code.hall.ManagerInterface"
-            android:screenOrientation="portrait"
-            android:label="Hall Manager" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".code.hall.Tables"
-            android:screenOrientation="portrait"
-            android:label="Hall Manager" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".code.hall.ReadytoServeOrders"
-            android:screenOrientation="portrait"
-            android:label="Hall Manager" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".code.hall.ReceivePayment"
-            android:screenOrientation="portrait"
-            android:label="Hall Manager" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".code.hall.Tracking"
-            android:screenOrientation="portrait"
-            android:label="Hall Manager" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".code.hall.Tablets"
-            android:screenOrientation="portrait"
-            android:label="Hall Manager" />
-        <activity
-            android:name=".code.hall.ViewCompletedOrders"
-            android:label="Hall Manager"></activity>
-
+            android:screenOrientation="portrait" />
+        <activity android:name=".code.hall.ViewCompletedOrders"></activity>
 
         <!--Billing Module-->
         <activity android:name=".code.billing.PendingPayments" />
@@ -122,6 +124,11 @@
         <activity android:name=".code.order.cartListView"/>
         <activity android:name=".code.order.Time"/>
         <activity android:name=".code.order.setQuantity"/>
+
+
+        <!--Reporting Module-->
+        <activity android:name=".MainActivity"/>
+
 
 
     </application>
