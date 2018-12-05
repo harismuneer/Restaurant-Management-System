@@ -110,6 +110,12 @@
         <activity android:name=".code.billing.Feedback" />
 
 
+        <!--Kitchen Module-->
+        <activity android:name=".code.kitchen.MainActivity" />
+        <activity android:name=".code.kitchen.CooksListActivity" />
+        <activity android:name=".code.kitchen.AttendanceActivity" />
+
+
     </application>
 
 
