@@ -1,6 +1,26 @@
 <resources>
     <string name="app_name">DineOut</string>
 
+    <string name="Orderup">RMS3</string>
+    <string-array name="employee_types">
+        <item>Waiter</item>
+        <item>Chef</item>
+        <item>Head Chef</item>
+        <item>Hall Manager</item>
+    </string-array>
+    <string-array name="days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+
+    </string-array>
+    <string name="promptEmployee">Select Employee Type</string>
+
+
     <!--KITCHEN-->
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

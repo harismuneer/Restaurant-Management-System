@@ -1,4 +1,4 @@
-package com.dineout.billing;
+package com.dineout.code.billing;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

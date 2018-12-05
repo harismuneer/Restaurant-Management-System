@@ -1,4 +1,4 @@
-package com.dineout.billing;
+package com.dineout.code.billing;
 
 import com.dineout.R;
 

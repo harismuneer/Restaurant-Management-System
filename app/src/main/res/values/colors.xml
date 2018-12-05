@@ -7,4 +7,8 @@
     <color name="appOrange">#ff9800</color>
     <color name="appOrangeDark">#ef6c00</color>
 
+    <color name="red">#D81B60</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
 </resources>

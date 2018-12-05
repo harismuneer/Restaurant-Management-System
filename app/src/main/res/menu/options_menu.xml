@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Logout"
+        android:id="@+id/logout"
+        android:orderInCategory="1"
+        app:showAsAction="always" />
+</menu>

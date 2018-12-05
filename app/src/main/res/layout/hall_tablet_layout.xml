@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:elevation="12dp">
+
+    <TextView
+        android:id="@+id/Tabletid200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="10dp"
+        android:text="Tablet Id: "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/TID200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/Tabletid200"
+        android:layout_toRightOf="@+id/Tabletid200"
+        android:layout_marginTop="9dp"
+        android:text=" 1"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/status200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: "
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/Tabletid200"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/s200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TID200"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/status200"
+        android:layout_toRightOf="@+id/status200"
+        android:text="In Use"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/assign200"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="118dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/TID200"
+        android:layout_toRightOf="@+id/TID200"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:fontFamily="serif"
+        android:text="Assign"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+</RelativeLayout>

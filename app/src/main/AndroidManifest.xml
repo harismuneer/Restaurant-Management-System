@@ -16,27 +16,98 @@
         android:hardwareAccelerated="false"
         android:largeHeap="true">
 
+
+        <!--Admin Module-->
+        <activity
+            android:name=".code.admin.LoginActivity"
+            android:label="Login" />
+        <activity
+            android:name=".code.admin.HomeActivity"
+            android:label="Order Up">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".code.admin.AdminPanelActivity"
+            android:label="Admin Menu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".code.admin.AddItem"
+            android:label="Add Inventory Item"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".code.admin.Updateitem"
+            android:label="Update Menu Item"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".code.admin.AddEmployeeActivity"
+            android:label="Add Employee"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".code.admin.AddTableActivity"
+            android:label="Add Table"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".code.admin.AddTabletActivity"
+            android:label="Add Tablet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".code.admin.IngredientsList"
+            android:label="Ingredients"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".code.admin.AddMenuItemActivity"
+            android:label="Add Menu Item"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".code.admin.EndOfWeekActivitiy"
+            android:label="Set End of Week"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".code.admin.Notifications"
+            android:label="Notifications" />
+
+        <!--Hall Management Module-->
+        <activity
+            android:name=".code.hall.TableSetup"
+            android:screenOrientation="portrait"
+            android:label="Hall Manager" />
+        <activity
+            android:name=".code.hall.ManagerInterface"
+            android:screenOrientation="portrait"
+            android:label="Hall Manager" />
+        <activity
+            android:name=".code.hall.Tables"
+            android:screenOrientation="portrait"
+            android:label="Hall Manager" />
+        <activity
+            android:name=".code.hall.ReadytoServeOrders"
+            android:screenOrientation="portrait"
+            android:label="Hall Manager" />
+        <activity
+            android:name=".code.hall.ReceivePayment"
+            android:screenOrientation="portrait"
+            android:label="Hall Manager" />
+        <activity
+            android:name=".code.hall.Tracking"
+            android:screenOrientation="portrait"
+            android:label="Hall Manager" />
+        <activity
+            android:name=".code.hall.Tablets"
+            android:screenOrientation="portrait"
+            android:label="Hall Manager" />
+        <activity
+            android:name=".code.hall.ViewCompletedOrders"
+            android:label="Hall Manager"></activity>
+
+
         <!--Billing Module-->
-        <activity android:name=".billing.PendingPayments">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".billing.ConfirmPayment" />
-        <activity android:name=".billing.Feedback"></activity>
-
-
-        <!--Kitchen Module-->
-        <activity android:name=".kitchen.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".kitchen.CooksListActivity" />
-        <activity android:name=".kitchen.AttendanceActivity" />
+        <activity android:name=".code.billing.PendingPayments" />
+        <activity android:name=".code.billing.ConfirmPayment" />
+        <activity android:name=".code.billing.Feedback" />
 
 
     </application>

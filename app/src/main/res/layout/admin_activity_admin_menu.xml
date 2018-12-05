@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminPanelActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/AddInventoryItemButton301"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mybutton"
+            android:onClick="onClickReg"
+            android:text="Add Inventory Item" />
+
+        <Button
+            android:id="@+id/AddMenuItemButton301"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mybutton"
+            android:onClick="onClickReg5"
+            android:text="Add Menu Item " />
+
+        <Button
+            android:id="@+id/AddEmployeeButton301"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mybutton"
+            android:onClick="onClickReg2"
+            android:text="Add Employee" />
+
+        <Button
+            android:id="@+id/ViewIngredientsButton301"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mybutton"
+            android:onClick="onClickReg1"
+            android:text="View Ingredients" />
+
+        <Button
+            android:id="@+id/AddTableButton301"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mybutton"
+            android:onClick="onClickReg4"
+            android:text="Add Table" />
+
+        <Button
+            android:id="@+id/AddTabletButton301"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mybutton"
+            android:onClick="onClickReg3"
+            android:text="Add Tablet" />
+
+        <Button
+            android:id="@+id/ViewNotificationsButton301"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mybutton"
+
+            android:text="Notifications " />
+
+        <Button
+            android:id="@+id/SetEndOfWeekButton301"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mybutton"
+            android:onClick="onClickReg6"
+            android:text="Set End of Week " />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

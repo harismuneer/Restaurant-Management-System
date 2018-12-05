@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:elevation="12dp">
+
+    <TextView
+        android:id="@+id/Tableid204"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="10dp"
+        android:text="Table Id: "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/TID200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/Tableid204"
+        android:layout_toRightOf="@+id/Tableid204"
+        android:layout_marginTop="9dp"
+        android:text=" 1"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/orderid200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order ID: "
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/Tableid204"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/OID200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/TID200"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/orderid200"
+        android:layout_toRightOf="@+id/orderid200"
+        android:text=" 4"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/serverid200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Server ID: "
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/orderid200"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/SID200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/OID200"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/serverid200"
+        android:layout_toRightOf="@+id/serverid200"
+        android:text="10"
+        android:textSize="20dp" />
+</RelativeLayout>

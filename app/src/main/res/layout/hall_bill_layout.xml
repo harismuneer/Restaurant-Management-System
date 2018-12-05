@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:elevation="12dp">
+
+    <TextView
+        android:id="@+id/Tableid203"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="10dp"
+        android:text="Table Id: "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/TID200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/Tableid203"
+        android:layout_toRightOf="@+id/Tableid203"
+        android:layout_marginTop="9dp"
+        android:text="1"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/orderid200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OrderID: "
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/Tableid203"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/OID200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/TID200"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/orderid200"
+        android:layout_toRightOf="@+id/orderid200"
+        android:text="4"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/bill200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bill Amount: "
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/orderid200"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/amount200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/OID200"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/bill200"
+        android:layout_toRightOf="@+id/bill200"
+        android:text="400"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/status200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: "
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/bill200"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/s200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bill200"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/status200"
+        android:layout_toRightOf="@+id/status200"
+        android:text="Unpaid"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/Paid200"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="118dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/OID200"
+        android:layout_toRightOf="@+id/OID200"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:fontFamily="serif"
+        android:text="Paid"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

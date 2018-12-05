@@ -1,4 +1,4 @@
-package com.dineout.billing;
+package com.dineout.code.billing;
 
 import com.dineout.R;
 
@@ -14,7 +14,6 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
