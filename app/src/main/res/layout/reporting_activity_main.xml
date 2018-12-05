@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="marker.project.dineout.MainActivity">
+    tools:context=".code.order.MainActivity">
 
     <Button
         android:id="@+id/end_button"

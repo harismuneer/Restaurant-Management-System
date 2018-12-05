@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Time">
+    tools:context=".code.order.Time">
 
     <TextView
         android:id="@+id/eTime"
@@ -60,7 +60,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/holo_orange_dark"
-        android:onClick="RediectToUpdateOrder"
+        android:onClick="onClickReg100"
         android:text="Update Order"
         android:textColor="@android:color/white"
         android:textStyle="bold"
@@ -81,7 +81,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/holo_orange_dark"
-        android:onClick="RediectToCancelOrder"
+        android:onClick="onClickReg101"
         android:text="Cancel Order"
         android:textColor="@android:color/white"
         android:textStyle="bold"
@@ -100,8 +100,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/holo_orange_dark"
-        android:onClick="RediectToGenerateBill"
-        android:text="Generate Bill"
+        android:onClick="onClickReg102"
+        android:text="View Bill"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
