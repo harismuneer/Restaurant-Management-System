@@ -60,7 +60,7 @@ public class AdminPanelActivity extends AppCompatActivity {
         checkdate();
 
 
-        notificationButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.mybutton));
+        notificationButton.setBackgroundResource((R.drawable.mybutton));
         notificationButton.setTextColor(getResources().getColor(R.color.black));
 
         notificationButton.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +85,7 @@ public class AdminPanelActivity extends AppCompatActivity {
                 for (DataSnapshot dsp : dataSnapshot.getChildren()) {
                     if (dsp != null) {
                         notification = dsp.getValue(com.dineout.code.admin.NotificationClass.class);
-                        if (notification != null) {
+                        if (notification != null && notification.getTime()!=null && notification.getItemName()!=null){
                             if (notification.isRead() == false) {
                                 notificationButton.setText("New Notification");
                                 notificationButton.setBackgroundColor(getResources().getColor(R.color.red)); //DON'T CHANGE THE COLORS HERE LOL
@@ -158,18 +158,17 @@ public class AdminPanelActivity extends AppCompatActivity {
     /*notification button state restore. also checking new notificatinos*/
     @Override
     protected void onResume() {
-        notificationButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.mybutton));
+        notificationButton.setBackgroundResource((R.drawable.mybutton));
         notificationButton.setTextColor(getResources().getColor(R.color.black));
         notificationButton.setText("Notifications");
         databaseReference.addValueEventListener(new ValueEventListener() {
             com.dineout.code.admin.NotificationClass notification;
-
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot dsp : dataSnapshot.getChildren()) {
                     if (dsp != null) {
                         notification = dsp.getValue(com.dineout.code.admin.NotificationClass.class);
-                        if (notification != null) {
+                        if (notification != null && notification.getTime()!=null && notification.getItemName()!=null) {
                             if (notification.isRead() == false) {
                                 notificationButton.setText("New Notification");
                                 notificationButton.setBackgroundColor(getResources().getColor(R.color.red)); //DON'T CHANGE THE COLORS HERE LOL
