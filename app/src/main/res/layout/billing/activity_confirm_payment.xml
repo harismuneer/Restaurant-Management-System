@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".ConfirmPayment">
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent">
+
+                <TextView android:id="@+id/orderid_confirm" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+                    android:text="TextView" app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView android:id="@+id/tableid_confirm" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginStart="28dp"
+                    android:text="TextView"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/orderid_confirm"
+                    app:layout_constraintStart_toEndOf="@+id/orderid_confirm" />
+
+                <TextView android:id="@+id/time_confirm" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp" android:text="TextView"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tableid_confirm"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.854"
+                    app:layout_constraintStart_toEndOf="@+id/tableid_confirm" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v7.widget.RecyclerView android:id="@+id/billRecView"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+            <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:id="@+id/bill1" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" android:text="Bill: "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button android:id="@+id/split_button" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp" android:onClick="onClickSplit"
+                    android:text="Split"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/total_bill1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.961"
+                    app:layout_constraintStart_toEndOf="@+id/total_bill1" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v7.widget.RecyclerView android:id="@+id/billRecView2"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:visibility="invisible">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView android:id="@+id/bill2" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" android:text="Bill: "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:visibility="invisible" app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView android:id="@+id/total_bill1" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+                android:text="Total Bill: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button android:id="@+id/confirm_payment" style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Confirm Payment" />
+
+            <Button android:id="@+id/payment_feedback"
+                style="@style/Widget.AppCompat.Button.Colored" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:onClick="onFeedbackClick"
+                android:text="Give Feedback" android:visibility="gone" />
+
+            <Button android:id="@+id/payment_merge" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:onClick="onClickMerge"
+                android:text="Merge Orders" android:visibility="invisible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
