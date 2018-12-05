@@ -125,7 +125,12 @@ public class RecyclerViewAdapterOrdersOfCook extends RecyclerView.Adapter<OrderV
                                     public void onClick(DialogInterface dialog, int id) {
                                         String orderId = mData.get(position).getOrderid();
                                         int servings = mData.get(position).getServings();
-                                        int enteredQuantity= Integer.parseInt(userInput.getText().toString());
+                                        int enteredQuantity=0;
+                                        try {
+                                            enteredQuantity = Integer.parseInt(userInput.getText().toString());
+                                        } catch (Exception e) {
+                                            Toast.makeText(mContext, "Invalid Number of servings wasted", Toast.LENGTH_LONG ).show();       // get user input and set it to result
+                                        }
                                         String dishname = mData.get(position).getDishname();
 
                                         if(enteredQuantity>servings)
