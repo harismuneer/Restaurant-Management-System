@@ -236,7 +236,7 @@ public class EndOfDay_EventHandler {
                 //to be checked
                 total_sales += ((order)pair.getValue()).total_amount;
                 total_tax += TAX_PERCENT * ((order)pair.getValue()).total_amount;
-                total_profits += PROFIT_PERCENT * ((order)pair.getValue()).total_amount;
+                total_profits += PROFIT_PERCENT * (((order)pair.getValue()).total_amount - TAX_PERCENT * ((order)pair.getValue()).total_amount);
                 total_loss += ((order)pair.getValue()).loss;
                 it.remove();
             }
@@ -467,11 +467,11 @@ public class EndOfDay_EventHandler {
                             {
 
                                 order o = time_stamp_order.get(id_timestamp.get(order_id));
-                                o.loss = o.loss + dish_prices.get(dish_name);
+                                o.loss = o.loss + (int)(dish_prices.get(dish_name) - (dish_prices.get(dish_name)*PROFIT_PERCENT));
                                 time_stamp_order.put(id_timestamp.get(order_id), o);
                             }
                             else
-                                {
+                            {
 
                                 order o = time_stamp_order.get(id_timestamp.get(order_id));
                                 o.total_amount = o.total_amount + (servings * dish_prices.get(dish_name));
@@ -542,4 +542,3 @@ public class EndOfDay_EventHandler {
 
 
 }
-
