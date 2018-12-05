@@ -85,8 +85,8 @@ public class LoginActivity extends AppCompatActivity {
                                                 if (employee.getType().equals("Hall Manager") && txtEmailLogin.getText().toString().equals(employee.getEmail())) {
                                                     databaseReference.removeEventListener(this);
                                                     Intent i = new Intent(LoginActivity.this, com.dineout.code.hall.ManagerInterface.class);
+                                                    i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                                                     startActivity(i);
-                                                    finish();
                                                 }
                                             }
                                             if (employee != null) {
@@ -94,16 +94,16 @@ public class LoginActivity extends AppCompatActivity {
                                                     databaseReference.removeEventListener(this);
 
                                                     Intent i = new Intent(LoginActivity.this, com.dineout.code.kitchen.MainActivity.class);
+                                                    i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                                                     startActivity(i);
-                                                    finish();
                                                 }
                                             }
 
                                             if (txtEmailLogin.getText().toString().equals("admin@gmail.com")) {
                                                 databaseReference.removeEventListener(this);
                                                 Intent i = new Intent(LoginActivity.this, AdminPanelActivity.class);
+                                                i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                                                 startActivity(i);
-                                                finish();
                                             }
                                         }
                                     }

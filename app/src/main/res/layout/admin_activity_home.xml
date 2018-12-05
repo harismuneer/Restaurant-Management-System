@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#FFFFFF"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".code.admin.HomeActivity">
 
     <ImageView
         android:id="@+id/logo"
@@ -49,8 +49,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="16dp"
+            android:onClick="onClickReg2"
             android:layout_weight="0.5"
             android:background="@drawable/mybutton"
-            android:text="Login as Customer" />
+            android:text="Show Customer Interface" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
