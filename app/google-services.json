@@ -1,0 +1,451 @@
+{
+  "project_info": {
+    "project_number": "657372416727",
+    "firebase_url": "https://rms1-ecd09.firebaseio.com",
+    "project_id": "rms1-ecd09",
+    "storage_bucket": "rms1-ecd09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657372416727:android:7e79cc9d45feb1d9",
+        "android_client_info": {
+          "package_name": "com.dineout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657372416727-n6op8i22tlcrd1jrdjjq8ubfbmoq83jh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dineout",
+            "certificate_hash": "e22a594f6b5b40c78aa7a56649674dc53689f656"
+          }
+        },
+        {
+          "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsiFN1ASipEsm_iZ-qa1wOeELMV-LKKmA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657372416727:android:9d6209a00bbe95e5",
+        "android_client_info": {
+          "package_name": "com.example.Fatima.lettuceeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsiFN1ASipEsm_iZ-qa1wOeELMV-LKKmA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657372416727:android:8d51c14abe94abbe",
+        "android_client_info": {
+          "package_name": "com.example.Maleeha.lettuceeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsiFN1ASipEsm_iZ-qa1wOeELMV-LKKmA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657372416727:android:7ce663d59dd0afcc",
+        "android_client_info": {
+          "package_name": "com.example.dell.rms3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsiFN1ASipEsm_iZ-qa1wOeELMV-LKKmA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657372416727:android:44f4bb3a06314610",
+        "android_client_info": {
+          "package_name": "com.example.khalid.lettuceeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657372416727-7mc7bv47nv7u84ntgvkpu3h73ostqma7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.khalid.lettuceeat",
+            "certificate_hash": "73350003d34a74cbe38a42b3e1e33dda84a2809d"
+          }
+        },
+        {
+          "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsiFN1ASipEsm_iZ-qa1wOeELMV-LKKmA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657372416727:android:c816ecf625917266",
+        "android_client_info": {
+          "package_name": "com.example.mahnoorkhan.notifyadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657372416727-l9a507hv2tpsto5puv39mbh00ceu3lrb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mahnoorkhan.notifyadmin",
+            "certificate_hash": "3a343cae58a46582dcbf862608567d1c8a0b47f3"
+          }
+        },
+        {
+          "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsiFN1ASipEsm_iZ-qa1wOeELMV-LKKmA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657372416727:android:7d0a13ab069621b3",
+        "android_client_info": {
+          "package_name": "com.example.nabee.softwareengineering"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657372416727-sij769pmaq3psbp6c2mtkq29433b9upa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nabee.softwareengineering",
+            "certificate_hash": "8c257260433f9b6c48bce5a7c44bca4d085e0ef1"
+          }
+        },
+        {
+          "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsiFN1ASipEsm_iZ-qa1wOeELMV-LKKmA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657372416727:android:0a4aa6ef4d5dbd31",
+        "android_client_info": {
+          "package_name": "com.example.rmsha.prototype"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657372416727-u6asotpt0m69u3tet4f5etdruqrlie65.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rmsha.prototype",
+            "certificate_hash": "be9b09c513db3b74d915820c118bfcdd72e3bd37"
+          }
+        },
+        {
+          "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsiFN1ASipEsm_iZ-qa1wOeELMV-LKKmA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657372416727:android:7619ff1078b4f561",
+        "android_client_info": {
+          "package_name": "com.example.zara.lettuceeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657372416727-i0tb0jl762te6immf2hlh9tb338q4ev6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zara.lettuceeat",
+            "certificate_hash": "815ec41320e21f3ca7de25d3ce7f9ce20ad60916"
+          }
+        },
+        {
+          "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsiFN1ASipEsm_iZ-qa1wOeELMV-LKKmA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657372416727:android:e12682e2f170d52e",
+        "android_client_info": {
+          "package_name": "com.saboor.aros"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657372416727-j38m8qm53072vav79pk0c31p7njs686s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.saboor.aros",
+            "certificate_hash": "3d86c3fe7187076fd8136fe5f4ce66bbea30469c"
+          }
+        },
+        {
+          "client_id": "657372416727-ra7ijb754t7bnk4qat0cu1fkqfe6jiou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.saboor.aros",
+            "certificate_hash": "858d10801939e197155c74cfbc8bda003e708f78"
+          }
+        },
+        {
+          "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsiFN1ASipEsm_iZ-qa1wOeELMV-LKKmA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657372416727:android:e2277722e6400758",
+        "android_client_info": {
+          "package_name": "marker.project.dineout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657372416727-o60np9sj9chqcek52nl1ft2hug91r386.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsiFN1ASipEsm_iZ-qa1wOeELMV-LKKmA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
