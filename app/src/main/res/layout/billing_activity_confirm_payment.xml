@@ -86,10 +86,8 @@
                     android:layout_marginEnd="8dp"
                     android:onClick="onClickSplit"
                     android:text="Split"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/total_bill1"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.961"
-                    app:layout_constraintStart_toEndOf="@+id/total_bill1" />
+                    app:layout_constraintHorizontal_bias="0.961" />
 
             </android.support.constraint.ConstraintLayout>
 
