@@ -94,11 +94,11 @@ public class LoginActivity extends AppCompatActivity {
                                                 if (employee.getType().equals("Head Chef") && txtEmailLogin.getText().toString().equals(employee.getEmail())) {
                                                     databaseReference.removeEventListener(this);
                                                     databaseReference.removeEventListener(this);
-                                                    // Intent i = new Intent(LoginActivity.this, com.example.khalid.lettuceeat.ManagerInterface.class);
-                                                    //startActivity(i);
-                                                    //finish();
+                                                    Intent i = new Intent(LoginActivity.this, com.dineout.code.kitchen.MainActivity.class);
+                                                    startActivity(i);
+                                                    finish();
                                                     //head chef ki intent yaga poar add karni hai
-                                                    Toast.makeText(LoginActivity.this, "Head Chef Interface Here", Toast.LENGTH_LONG).show();
+                                                    //Toast.makeText(LoginActivity.this, "Head Chef Interface Here", Toast.LENGTH_LONG).show();
 
                                                 }
                                             }

@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
 
-        Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
 
         setContentView(R.layout.kitchen_activity_main);
         actionBar=getSupportActionBar();

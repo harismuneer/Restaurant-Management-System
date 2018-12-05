@@ -45,7 +45,7 @@ public class RecyclerViewAdapterOrdersOfCook extends RecyclerView.Adapter<OrderV
         mContext = context;
         mData = data;
         mCookNo = cookNo;
-        Toast.makeText(context, "sssss" + cookNo, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(context, "sssss" + cookNo, Toast.LENGTH_SHORT).show();
         mTextViews = new ArrayList<>();
     }
 
