@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.dineout.R;
 import com.dineout.code.kitchen.models.Chef;
@@ -60,7 +59,7 @@ public class RecyclerViewAdapterCookList extends RecyclerView.Adapter<RecyclerVi
                 MainActivity.mChefs.get(chefNo).getChefQueue().remove(itemNo);
 
                 MainActivity.adapter.notifyDataSetChanged();
-                Toast.makeText(mContext, mChefs.get(position).getName() + " has been assigned the dish", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(mContext, mChefs.get(position).getName() + " has been assigned the dish", Toast.LENGTH_SHORT).show();
                 // dummyActivity.selected = true;
                 // dummyActivity.mChefs = mChefs;
 
@@ -83,7 +82,7 @@ public class RecyclerViewAdapterCookList extends RecyclerView.Adapter<RecyclerVi
 
                 MainActivity.mChefs.get(chefNo).getChefQueue().remove(itemNo);
                 MainActivity.adapter.notifyDataSetChanged();
-                Toast.makeText(mContext, mChefs.get(position).getName() + " has been assigned the dish", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(mContext, mChefs.get(position).getName() + " has been assigned the dish", Toast.LENGTH_SHORT).show();
 
                // ((dummyActivity)mContext).reinitializeCookAdapter();/////////////
                 // dummyActivity.selected = true;

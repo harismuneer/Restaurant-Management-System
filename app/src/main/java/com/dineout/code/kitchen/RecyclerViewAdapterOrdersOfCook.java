@@ -19,7 +19,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dineout.R;
-
 import com.dineout.code.kitchen.models.OrderComparator;
 import com.dineout.code.kitchen.models.OrderDb;
 import com.dineout.code.kitchen.models.OrderDetailsDb;
@@ -45,7 +44,7 @@ public class RecyclerViewAdapterOrdersOfCook extends RecyclerView.Adapter<OrderV
         mContext = context;
         mData = data;
         mCookNo = cookNo;
-        Toast.makeText(context, "sssss" + cookNo, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "sssss" + cookNo, Toast.LENGTH_SHORT).show();
         mTextViews = new ArrayList<>();
     }
 

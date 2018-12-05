@@ -1,7 +1,5 @@
 package com.dineout.code.admin;
 
-import com.dineout.R;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -16,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dineout.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -190,13 +189,13 @@ public class AddEmployeeActivity extends AppCompatActivity {
                             @Override
                             public void onChildAdded(DataSnapshot dataSnapshot, String prevChildKey) {
                                 if (dataSnapshot != null) {
-                                    Toast.makeText(AddEmployeeActivity.this, "IDZ=" + String.valueOf(dataSnapshot.getValue(Long.class)), Toast.LENGTH_SHORT).show();
+                                    //Toast.makeText(AddEmployeeActivity.this, "IDZ=" + String.valueOf(dataSnapshot.getValue(Long.class)), Toast.LENGTH_SHORT).show();
 
                                     eid.add(dataSnapshot.getValue(Long.class));
 
                                 }
 
-                                Toast.makeText(AddEmployeeActivity.this, "Value of it  " + eid.get(0), Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(AddEmployeeActivity.this, "Value of it  " + eid.get(0), Toast.LENGTH_SHORT).show();
 
                             }
 

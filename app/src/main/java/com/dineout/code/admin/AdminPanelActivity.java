@@ -1,7 +1,5 @@
 package com.dineout.code.admin;
 
-import com.dineout.R;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.dineout.R;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,10 +21,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.DateFormat;
 import java.text.ParsePosition;
-import java.util.Date;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Locale;
 
 
@@ -199,11 +197,14 @@ public class AdminPanelActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.logout) {
+
             Intent intent;
             intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
-            //finish
+
+            finish();
             return true;
+
         } else {
             return super.onOptionsItemSelected(item);
         }
