@@ -116,6 +116,14 @@
         <activity android:name=".code.kitchen.AttendanceActivity" />
 
 
+        <!--Order Module-->
+        <activity android:name=".code.order.WelcomePage"/>
+        <activity android:name=".code.order.MainActivity"/>
+        <activity android:name=".code.order.cartListView"/>
+        <activity android:name=".code.order.Time"/>
+        <activity android:name=".code.order.setQuantity"/>
+
+
     </application>
 
 

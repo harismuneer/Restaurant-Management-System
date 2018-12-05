@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:id="@+id/menulayout">
+
+    <TextView
+        android:id="@+id/textView_dishName"
+        android:layout_width="161dp"
+        android:layout_height="66dp"
+        android:layout_alignTop="@id/dishPrice"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="233dp"
+        android:layout_toLeftOf="@id/dishPrice"
+        android:text="TextView "
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/textView2_description"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="192dp"
+
+
+        android:layout_marginRight="0dp"
+        android:layout_toLeftOf="@id/imageView"
+        android:text="TextView"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/imageView"
+        android:layout_width="46dp"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="71dp"
+        android:layout_marginRight="9dp"
+        android:clickable="true"
+        android:cropToPadding="true"
+        android:focusable="true"
+        android:background="@drawable/plus"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/dishPrice"
+        android:layout_width="91dp"
+        android:layout_height="74dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-53dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
+        android:layout_toLeftOf="@id/imageView"
+        android:text="TextView" />
+
+
+</RelativeLayout>

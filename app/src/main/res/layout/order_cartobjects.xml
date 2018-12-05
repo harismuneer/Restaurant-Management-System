@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/cartDishName"
+        android:layout_width="168dp"
+        android:layout_height="67dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="9dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cartDishPrice"
+        android:layout_width="85dp"
+        android:layout_height="71dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="195dp"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="9dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/cartDishDesc"
+        android:layout_width="263dp"
+        android:layout_height="102dp"
+        android:layout_alignEnd="@+id/cartDishName"
+        android:layout_alignRight="@+id/cartDishName"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="-97dp"
+        android:layout_marginRight="-97dp"
+        android:text="TextView" />
+
+    <ImageButton
+        android:id="@+id/remove"
+        android:layout_width="47dp"
+        android:layout_height="55dp"
+        android:layout_alignTop="@+id/cartDishName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="46dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        android:background="@drawable/dustbin" />
+
+</RelativeLayout>
