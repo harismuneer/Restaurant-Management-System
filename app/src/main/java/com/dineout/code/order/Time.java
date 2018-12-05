@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dineout.R;
+import com.dineout.code.billing.ConfirmPayment;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -124,14 +125,10 @@ public class Time extends AppCompatActivity {
     //ViewBill
     public void onClickReg102(View v)
     {
-        startActivity(new Intent(Time.this, com.dineout.code.billing.ConfirmPayment.class));  // changed to that interface
+        Intent i = new Intent(this, ConfirmPayment.class);
+        i.putExtra("customerview", "true");
+        startActivity(i);
     }
-
-
-
-
-
-
 }
 
 /*a listener that upon entering Timer table fires and disables add(plus)button
