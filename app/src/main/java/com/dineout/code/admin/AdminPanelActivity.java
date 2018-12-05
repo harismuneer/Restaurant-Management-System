@@ -56,7 +56,6 @@ public class AdminPanelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_activity_admin_menu);
 
-        ref.child("Date").child("date").setValue(date);
         notificationButton = (Button) findViewById(R.id.ViewNotificationsButton301);
         checkdate();
 
@@ -226,7 +225,7 @@ public class AdminPanelActivity extends AppCompatActivity {
 
                 if (d1.compareTo(d2) == 0) {
                     DatabaseReference ref1 = FirebaseDatabase.getInstance().getReference();
-                    ref1.child("Date").setValue(date);
+                    ref1.child("Date").child("date").setValue(date);
                     checkdb();
                 }
 
