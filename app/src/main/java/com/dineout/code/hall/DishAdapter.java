@@ -49,7 +49,7 @@ public class DishAdapter extends ArrayAdapter<OrderDetails> {
 
     public DishAdapter(Context context, List<OrderDetails> dishes) {
         super(context, R.layout.hall_dishes_queue, dishes);
-        count = 0;
+        count = 1;
         this.dishes = dishes;
     }
 
@@ -73,6 +73,8 @@ public class DishAdapter extends ArrayAdapter<OrderDetails> {
         view.setOnTouchListener(new OnSwipeTouchListener(getContext()) {
 
             boolean possible = true;
+            boolean done = false;
+            boolean clicked = false;
 
             @Override
             public void onLongClick() {
@@ -121,14 +123,18 @@ public class DishAdapter extends ArrayAdapter<OrderDetails> {
                                                             FireBaseHelper helper = new FireBaseHelper();
                                                             //LOOK HERE!!!
                                                             //LOAD BALANCING FUNCTION TO BE CALLED HERE - BY DEFAULT, IT ALWAYS GOES TO THE WAITING QUEUE!!
-                                                            if(possible) {
+                                                            if(possible && dishes.size()>0) {
                                                                 if (dish.getServings() - count == 0)
                                                                     dishes.remove(position);
                                                                 else
                                                                     dishes.get(position).setServings(dishes.get(position).getServings() - count);
-                                                                helper.UpdateOrderDetails(dish.getOrderid(), dish.getDishname(), dish.getEstimatedtime(), dish.getServings(), count);
-                                                                Toast.makeText(getContext(), "Re-Order Confirmed!", Toast.LENGTH_SHORT).show();
-                                                            }
+                                                                if(!done)
+                                                                    helper.done = false;
+                                                                if(!clicked) {
+                                                                    helper.UpdateOrderDetails(dish.getOrderid(), dish.getDishname(), dish.getEstimatedtime(), dish.getServings(), count);
+                                                                    Toast.makeText(getContext(), "Re-Order Confirmed!", Toast.LENGTH_SHORT).show();
+                                                                    clicked = true;
+                                                                }}
                                                         }
                                                     });
                                                }
