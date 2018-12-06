@@ -127,7 +127,6 @@
         android:layout_marginTop="127dp"
         android:layout_marginBottom="9dp"
         android:background="#FFA500"
-        android:onClick="redirectToQuantityPrompt"
         android:text="Add"
         android:textColor="#ffffff"
         android:textSize="18sp"

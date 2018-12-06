@@ -46,7 +46,7 @@ public class EndOfDay_EventHandler
 {
 
     private Context context;
-    private String email="hassaan.elahi15@gmail.com";
+    private String email = "haris.muneer5@gmail.com";
 
     private String GetHTML(int total_sales, int total_tax, int total_loss, int total_profit)
     {

@@ -73,8 +73,6 @@
 
 
         <!--Reporting Module-->
-        <activity android:name=".code.reporting.dummyActivity" android:screenOrientation="portrait"/>
-
 
 
     </application>
