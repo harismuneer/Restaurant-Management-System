@@ -1,7 +1,5 @@
 package com.dineout.code.billing;
 
-import com.dineout.R;
-
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dineout.R;
 
 import java.util.ArrayList;
 
@@ -75,6 +74,7 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.OrdersView
                 public void onClick(View v) {
                     // Toast.makeText(ComplexRecyclerViewAdapter.this, "Item no: "+ position, Toast.LENGTH_LONG).show;
                     Toast.makeText(v.getContext(), "Opening OrderBill Details", Toast.LENGTH_SHORT).show();
+
                     Intent i = new Intent(c, ConfirmPayment.class);
                     i.putExtra("order", mDataset.get(x));
                     //i.putExtra("orderid", "1");

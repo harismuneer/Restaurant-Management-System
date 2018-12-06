@@ -12,18 +12,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 import com.dineout.R;
-
+import com.dineout.code.admin.LoginActivity;
 import com.dineout.code.kitchen.models.AttendanceDb;
 import com.dineout.code.kitchen.models.Chef;
 import com.dineout.code.kitchen.models.DishDb;
@@ -31,6 +27,12 @@ import com.dineout.code.kitchen.models.EmployeeDb;
 import com.dineout.code.kitchen.models.Order;
 import com.dineout.code.kitchen.models.OrderDb;
 import com.dineout.code.kitchen.models.OrderDetailsDb;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -64,7 +66,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
 
-        Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
 
         setContentView(R.layout.kitchen_activity_main);
         actionBar=getSupportActionBar();
@@ -230,7 +232,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
-                startProgressBar("Adding new dish...");
+                //startProgressBar("Adding new dish...");
 
                 OrderDetailsDb dish = dataSnapshot.getValue(OrderDetailsDb.class);
                 dish.setNodeId(dataSnapshot.getKey());
@@ -250,7 +252,7 @@ public class MainActivity extends AppCompatActivity
                     }
                 }
 
-                dismissProgressBar();
+                //dismissProgressBar();
 
             }
 
@@ -293,14 +295,14 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                startProgressBar("Loading Menu...");
+                Toast.makeText(getApplicationContext(), "Loading Menu...", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     DishDb dish = postSnapshot.getValue(DishDb.class);
                         dishes.add(dish);
                 }
 
-                dismissProgressBar();
+                //dismissProgressBar();
 
                 ExtractOrders();
             }
@@ -338,7 +340,8 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void loadAttendance(){
-        progressDialog.setMessage("Loading availability info...");
+        Toast.makeText(this, "Loading Availability Info", Toast.LENGTH_SHORT).show();
+        //progressDialog.setMessage("Loading availability info...");
         mDatabase.getReference("Attendance").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
@@ -352,7 +355,7 @@ public class MainActivity extends AppCompatActivity
                     }
                 }
 
-                progressDialog.dismiss();
+                //progressDialog.dismiss();
                 initRecyclerView();
 
                 ExtractMenuFromDb();
@@ -361,7 +364,7 @@ public class MainActivity extends AppCompatActivity
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                progressDialog.dismiss();
+                // progressDialog.dismiss();
             }
         });
     }
@@ -464,7 +467,9 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
-                startProgressBar("Adding orders...");
+                Toast.makeText(getApplicationContext(), "Adding Orders...", Toast.LENGTH_SHORT).show();
+
+                //startProgressBar("Adding orders...");
 
                 OrderDb order = dataSnapshot.getValue(OrderDb.class);
                 order.setNodeid(dataSnapshot.getKey());
@@ -473,7 +478,7 @@ public class MainActivity extends AppCompatActivity
                     orders.add(order);
                 }
 
-                dismissProgressBar();
+                //dismissProgressBar();
             }
 
             @Override
@@ -527,4 +532,31 @@ public class MainActivity extends AppCompatActivity
             }
         }
     }
+
+
+    //options menu for logout
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.options_menu, menu);
+        return true;
+    }
+
+    //
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.logout) {
+
+            Intent intent;
+            intent = new Intent(this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+            startActivity(intent);
+
+            return true;
+
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+    }
+
 }

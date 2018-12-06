@@ -1,7 +1,5 @@
 package com.dineout.code.admin;
 
-import com.dineout.R;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.dineout.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -86,27 +85,25 @@ public class LoginActivity extends AppCompatActivity {
                                                 if (employee.getType().equals("Hall Manager") && txtEmailLogin.getText().toString().equals(employee.getEmail())) {
                                                     databaseReference.removeEventListener(this);
                                                     Intent i = new Intent(LoginActivity.this, com.dineout.code.hall.ManagerInterface.class);
+                                                    i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                                                     startActivity(i);
-                                                    finish();
                                                 }
                                             }
                                             if (employee != null) {
                                                 if (employee.getType().equals("Head Chef") && txtEmailLogin.getText().toString().equals(employee.getEmail())) {
                                                     databaseReference.removeEventListener(this);
-                                                    databaseReference.removeEventListener(this);
-                                                    // Intent i = new Intent(LoginActivity.this, com.example.khalid.lettuceeat.ManagerInterface.class);
-                                                    //startActivity(i);
-                                                    //finish();
-                                                    //head chef ki intent yaga poar add karni hai
-                                                    Toast.makeText(LoginActivity.this, "Head Chef Interface Here", Toast.LENGTH_LONG).show();
 
+                                                    Intent i = new Intent(LoginActivity.this, com.dineout.code.kitchen.MainActivity.class);
+                                                    i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                                                    startActivity(i);
                                                 }
                                             }
+
                                             if (txtEmailLogin.getText().toString().equals("admin@gmail.com")) {
                                                 databaseReference.removeEventListener(this);
                                                 Intent i = new Intent(LoginActivity.this, AdminPanelActivity.class);
+                                                i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                                                 startActivity(i);
-                                                finish();
                                             }
                                         }
                                     }

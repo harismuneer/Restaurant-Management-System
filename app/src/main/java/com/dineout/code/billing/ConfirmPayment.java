@@ -2,8 +2,8 @@ package com.dineout.code.billing;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,7 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dineout.R;
-
+import com.dineout.code.order.confirmOrder;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -80,7 +80,7 @@ public class ConfirmPayment extends AppCompatActivity {
 
             //Show bill to customer
             if (o == null) {
-                oid = extras.getString("orderid");
+                oid = Integer.toString(confirmOrder.order_id);
                 populateForCustomer(oid);
             }
 

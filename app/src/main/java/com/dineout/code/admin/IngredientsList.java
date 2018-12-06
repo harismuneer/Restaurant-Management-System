@@ -55,7 +55,7 @@ public class IngredientsList extends AppCompatActivity {
 
                     //String s=dataSnapshot.getKey();
                     Item item = dataSnapshot.getValue(Item.class);
-                    Toast.makeText(IngredientsList.this, item.name.toString(), Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(IngredientsList.this, item.name.toString(), Toast.LENGTH_SHORT).show();
                     items.add(item);
                     ingredients.clear();
                     for (int i = 0; i < items.size(); i++) {

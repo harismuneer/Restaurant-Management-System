@@ -1,5 +1,4 @@
 package com.dineout.code.order;
-import com.dineout.R;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dineout.R;
+import com.dineout.code.billing.ConfirmPayment;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -107,26 +108,27 @@ public class Time extends AppCompatActivity {
         mTextViewCountDown.setText(timeLeftFormatted);
     }
 
-    private void RediectToUpdateOrder(View v)
+    //Update
+    public void onClickReg100(View v)
     {
+        Toast.makeText(getApplicationContext(), "Redirect to Update Order", Toast.LENGTH_SHORT).show();
         //startActivity(new Intent(Time.this,Time.class));  // changed to that interface
     }
 
-    private void RediectToCancelOrder(View v)
+    //Cancel
+    public void onClickReg101(View v)
     {
+        Toast.makeText(getApplicationContext(), "Redirect to Cancel Order", Toast.LENGTH_SHORT).show();
         //startActivity(new Intent(Time.this,Time.class));  // changed to that interface
     }
 
-    private void RediectToGenerateBill(View v)
+    //ViewBill
+    public void onClickReg102(View v)
     {
-        startActivity(new Intent(Time.this, com.dineout.code.billing.ConfirmPayment.class));  // changed to that interface
+        Intent i = new Intent(this, ConfirmPayment.class);
+        i.putExtra("customerview", "true");
+        startActivity(i);
     }
-
-
-
-
-
-
 }
 
 /*a listener that upon entering Timer table fires and disables add(plus)button

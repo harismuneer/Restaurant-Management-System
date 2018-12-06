@@ -1,5 +1,4 @@
 package com.dineout.code.order;
-import com.dineout.R;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -10,6 +9,7 @@ import android.support.v7.app.AppCompatDialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.dineout.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,6 +23,7 @@ import java.sql.Timestamp;
 public class confirmOrder extends AppCompatDialogFragment {
     public static int order_id = 1;
     String dishName;
+
     //HARDCODED TABLEID
     int tableid = 4, servingSize;
 
@@ -77,6 +78,8 @@ public class confirmOrder extends AppCompatDialogFragment {
                             addRow.setValue(ord);
                             addRow = appDb.child("OrderDetails").push();
                             addRow.setValue(od);
+
+
                             order_id++;
                             appDb.child("cart").removeValue();
                         }

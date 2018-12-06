@@ -49,9 +49,6 @@ public class ViewCompletedOrders extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hall_activity_view_completed_orders);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        myToolbar.setTitle("");
-        setSupportActionBar(myToolbar);
 
         mrecycleview = (RecyclerView) findViewById(R.id.list);
         RecyclerView.ItemDecoration itemDecoration = new
@@ -92,18 +89,18 @@ public class ViewCompletedOrders extends AppCompatActivity {
 
             @Override
             public void OnFreeClick(int position) {
-                Toast.makeText(ViewCompletedOrders.this, "Free Click on position :"+position,Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(ViewCompletedOrders.this, "Free Click on position :"+position,Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
             public void OnBookClick(int position) {
-                Toast.makeText(ViewCompletedOrders.this, "Served Click on position :"+position,Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(ViewCompletedOrders.this, "Served Click on position :"+position,Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void OnOccupyClick(int position) {
-                Toast.makeText(ViewCompletedOrders.this, "Occupy Click on position :"+position,Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(ViewCompletedOrders.this, "Occupy Click on position :"+position,Toast.LENGTH_SHORT).show();
             }
 
         });

@@ -56,9 +56,6 @@ public class ReceivePayment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hall_activity_receive_payment);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        myToolbar.setTitle("");
-        setSupportActionBar(myToolbar);
 
         mrecycleview = (RecyclerView) findViewById(R.id.list);
         RecyclerView.ItemDecoration itemDecoration = new
@@ -113,13 +110,13 @@ public class ReceivePayment extends AppCompatActivity {
 
                             @Override
                             public void OnFreeClick(int position) {
-                                Toast.makeText(ReceivePayment.this, "Free Click on position :"+position,Toast.LENGTH_SHORT).show();
+                             //   Toast.makeText(ReceivePayment.this, "Free Click on position :"+position,Toast.LENGTH_SHORT).show();
 
                             }
 
                             @Override
                             public void OnBookClick(int position) {
-                                Toast.makeText(ReceivePayment.this, "Paid Click on position :"+position,Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(ReceivePayment.this, "Paid Click on position :"+position,Toast.LENGTH_SHORT).show();
                                 mFirebaseDatabase3 = FirebaseDatabase.getInstance();
                                 mtablereference3 = mFirebaseDatabase3.getReference("Order").child(billstatus.get(position).getOrderID());
                                 Order order=new Order(billstatus.get(position).getTableID(), billstatus.get(position).getOrderID(),4, billstatus.get(position).getStatus());
@@ -133,7 +130,7 @@ public class ReceivePayment extends AppCompatActivity {
 
                             @Override
                             public void OnOccupyClick(int position) {
-                                Toast.makeText(ReceivePayment.this, "Occupy Click on position :"+position,Toast.LENGTH_SHORT).show();
+                              //  Toast.makeText(ReceivePayment.this, "Occupy Click on position :"+position,Toast.LENGTH_SHORT).show();
                             }
                         });
 

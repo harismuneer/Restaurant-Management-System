@@ -19,7 +19,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dineout.R;
-
 import com.dineout.code.kitchen.models.OrderComparator;
 import com.dineout.code.kitchen.models.OrderDb;
 import com.dineout.code.kitchen.models.OrderDetailsDb;
@@ -45,7 +44,7 @@ public class RecyclerViewAdapterOrdersOfCook extends RecyclerView.Adapter<OrderV
         mContext = context;
         mData = data;
         mCookNo = cookNo;
-        Toast.makeText(context, "sssss" + cookNo, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "sssss" + cookNo, Toast.LENGTH_SHORT).show();
         mTextViews = new ArrayList<>();
     }
 
@@ -126,7 +125,12 @@ public class RecyclerViewAdapterOrdersOfCook extends RecyclerView.Adapter<OrderV
                                     public void onClick(DialogInterface dialog, int id) {
                                         String orderId = mData.get(position).getOrderid();
                                         int servings = mData.get(position).getServings();
-                                        int enteredQuantity= Integer.parseInt(userInput.getText().toString());
+                                        int enteredQuantity=0;
+                                        try {
+                                            enteredQuantity = Integer.parseInt(userInput.getText().toString());
+                                        } catch (Exception e) {
+                                            Toast.makeText(mContext, "Invalid Number of servings wasted", Toast.LENGTH_LONG ).show();       // get user input and set it to result
+                                        }
                                         String dishname = mData.get(position).getDishname();
 
                                         if(enteredQuantity>servings)

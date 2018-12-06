@@ -51,9 +51,6 @@ public class ReadytoServeOrders extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hall_activity_ready_to_serve_orders);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        myToolbar.setTitle("");
-        setSupportActionBar(myToolbar);
 
         mrecycleview = (RecyclerView) findViewById(R.id.list);
         RecyclerView.ItemDecoration itemDecoration = new
@@ -71,7 +68,7 @@ public class ReadytoServeOrders extends AppCompatActivity {
                 for(DataSnapshot ds: dataSnapshot.getChildren()) {
                     o=ds.getValue(Order.class);
                     if(o.getStatus() == 2) {
-                        Toast.makeText(getApplicationContext(),"Umm wat?",Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getApplicationContext(),"Umm wat?",Toast.LENGTH_SHORT).show();
                         serveorder.add(o);
                     }
                 }
@@ -94,12 +91,12 @@ public class ReadytoServeOrders extends AppCompatActivity {
 
             @Override
             public void OnFreeClick(int position) {
-                Toast.makeText(ReadytoServeOrders.this, "Free Click on position :"+position,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(ReadytoServeOrders.this, "Free Click on position :"+position,Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void OnBookClick(int position) {
-                Toast.makeText(ReadytoServeOrders.this, "Served Click on position :"+position,Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(ReadytoServeOrders.this, "Served Click on position :"+position,Toast.LENGTH_SHORT).show();
                 mFirebaseDatabase2 = FirebaseDatabase.getInstance();
                 mtablereference2 = mFirebaseDatabase2.getReference("Order").child(serveorder.get(position).getId());
                 Order order=new Order(serveorder.get(position).getTableID(), serveorder.get(position).getId(),3, serveorder.get(position).getTimestamp());
@@ -108,7 +105,7 @@ public class ReadytoServeOrders extends AppCompatActivity {
 
             @Override
             public void OnOccupyClick(int position) {
-                Toast.makeText(ReadytoServeOrders.this, "Occupy Click on position :"+position,Toast.LENGTH_SHORT).show();
+               // Toast.makeText(ReadytoServeOrders.this, "Occupy Click on position :"+position,Toast.LENGTH_SHORT).show();
             }
 
         });

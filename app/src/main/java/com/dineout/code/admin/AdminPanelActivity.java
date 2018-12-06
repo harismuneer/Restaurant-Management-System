@@ -1,7 +1,5 @@
 package com.dineout.code.admin;
 
-import com.dineout.R;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.dineout.R;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,10 +21,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.DateFormat;
 import java.text.ParsePosition;
-import java.util.Date;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Locale;
 
 
@@ -56,12 +54,11 @@ public class AdminPanelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_activity_admin_menu);
 
-        ref.child("Date").child("date").setValue(date);
         notificationButton = (Button) findViewById(R.id.ViewNotificationsButton301);
         checkdate();
 
 
-        notificationButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.mybutton));
+        notificationButton.setBackgroundResource((R.drawable.mybutton));
         notificationButton.setTextColor(getResources().getColor(R.color.black));
 
         notificationButton.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +83,7 @@ public class AdminPanelActivity extends AppCompatActivity {
                 for (DataSnapshot dsp : dataSnapshot.getChildren()) {
                     if (dsp != null) {
                         notification = dsp.getValue(com.dineout.code.admin.NotificationClass.class);
-                        if (notification != null) {
+                        if (notification != null && notification.getTime()!=null && notification.getItemName()!=null){
                             if (notification.isRead() == false) {
                                 notificationButton.setText("New Notification");
                                 notificationButton.setBackgroundColor(getResources().getColor(R.color.red)); //DON'T CHANGE THE COLORS HERE LOL
@@ -159,18 +156,17 @@ public class AdminPanelActivity extends AppCompatActivity {
     /*notification button state restore. also checking new notificatinos*/
     @Override
     protected void onResume() {
-        notificationButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.mybutton));
+        notificationButton.setBackgroundResource((R.drawable.mybutton));
         notificationButton.setTextColor(getResources().getColor(R.color.black));
         notificationButton.setText("Notifications");
         databaseReference.addValueEventListener(new ValueEventListener() {
             com.dineout.code.admin.NotificationClass notification;
-
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot dsp : dataSnapshot.getChildren()) {
                     if (dsp != null) {
                         notification = dsp.getValue(com.dineout.code.admin.NotificationClass.class);
-                        if (notification != null) {
+                        if (notification != null && notification.getTime()!=null && notification.getItemName()!=null) {
                             if (notification.isRead() == false) {
                                 notificationButton.setText("New Notification");
                                 notificationButton.setBackgroundColor(getResources().getColor(R.color.red)); //DON'T CHANGE THE COLORS HERE LOL
@@ -201,11 +197,14 @@ public class AdminPanelActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.logout) {
+
             Intent intent;
             intent = new Intent(this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             startActivity(intent);
-            //finish
+
             return true;
+
         } else {
             return super.onOptionsItemSelected(item);
         }
@@ -226,7 +225,7 @@ public class AdminPanelActivity extends AppCompatActivity {
 
                 if (d1.compareTo(d2) == 0) {
                     DatabaseReference ref1 = FirebaseDatabase.getInstance().getReference();
-                    ref1.child("Date").setValue(date);
+                    ref1.child("Date").child("date").setValue(date);
                     checkdb();
                 }
 
