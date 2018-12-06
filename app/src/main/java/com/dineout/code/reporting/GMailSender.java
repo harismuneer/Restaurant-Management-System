@@ -22,7 +22,7 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
 
-public class GMailSender extends javax.mail.Authenticator 
+public class GMailSender extends javax.mail.Authenticator
 {
 
     private String mailhost = "smtp.gmail.com";
@@ -39,7 +39,7 @@ public class GMailSender extends javax.mail.Authenticator
 
         this.user = "dineoutx@gmail.com";
         this.password = "ShafaqAirlines78";
-        
+
         //setting the properties
         Properties props = new Properties();
         props.setProperty("mail.transport.protocol", "smtp");
@@ -50,13 +50,13 @@ public class GMailSender extends javax.mail.Authenticator
         props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
         props.put("mail.smtp.socketFactory.fallback", "false");
         props.setProperty("mail.smtp.quitwait", "false");
-        
+
         //taking the sessiosn object
         session = Session.getDefaultInstance(props, this);
 
     }
 
-    protected PasswordAuthentication getPasswordAuthentication() 
+    protected PasswordAuthentication getPasswordAuthentication()
     {
 
         return new PasswordAuthentication(user, password);
@@ -64,7 +64,7 @@ public class GMailSender extends javax.mail.Authenticator
 
 
 
-    public synchronized void sendMail(final String _subject, final String _body, final String _sender, final String _recipients) throws Exception
+    public synchronized void sendMail(final String _subject, final String _body,final String html,final String _sender,final String _recipients) throws Exception
     {
         new Thread(new Runnable()
         {
@@ -73,48 +73,56 @@ public class GMailSender extends javax.mail.Authenticator
 
             String sender;
             String recipients;
-        {
-            this.subject=_subject;
-            this.body=_body;
-            this.sender=_sender;
-            this.recipients=_recipients;
-        }
-        @Override
-        public void run()
-        {
-            try
             {
-
-                MimeMessage message = new MimeMessage(session);
-                DataHandler handler = new DataHandler(new ByteArrayDataSource(body.getBytes(), "text/plain"));
-                message.setSender(new InternetAddress(sender));
-                message.setSubject(subject);
-                message.setDataHandler(handler);
-                BodyPart messageBodyPart = new MimeBodyPart();
-                messageBodyPart.setText(body);
-                _multipart.addBodyPart(messageBodyPart);
-
-                // Put parts in message
-                message.setContent(_multipart);
-
-                if (recipients.indexOf(',') > 0)
-                {
-                    message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipients));
-                }
-                else
-                {
-                    message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipients));
-                }
-                Transport.send(message);
-
+                this.subject=_subject;
+                this.body=_body;
+                this.sender=_sender;
+                this.recipients=_recipients;
             }
-            catch (Exception e)
+            @Override
+            public void run()
             {
+                try
+                {
 
-                e.printStackTrace();
+                    MimeMessage message = new MimeMessage(session);
+                    DataHandler handler = new DataHandler(new ByteArrayDataSource(body.getBytes(), "text/plain"));
+                    message.setSender(new InternetAddress(sender));
+                    message.setSubject(subject);
+                    message.setDataHandler(handler);
+
+                    //making a new body part text
+                    BodyPart messageBodyPart = new MimeBodyPart();
+                    messageBodyPart.setText(body);
+                    _multipart.addBodyPart(messageBodyPart);
+
+                    //making html body par
+                    BodyPart html_bodypart = new MimeBodyPart();
+                    html_bodypart.setContent(html,"text/html");
+                    _multipart.addBodyPart(html_bodypart);
+
+                    //setting multipart as a content in the messege
+                    message.setContent(_multipart);
+
+
+                    if (recipients.indexOf(',') > 0)
+                    {
+                        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipients));
+                    }
+                    else
+                    {
+                        message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipients));
+                    }
+                    Transport.send(message);
+
+                }
+                catch (Exception e)
+                {
+
+                    e.printStackTrace();
+                }
             }
-        }
-    }).start();
+        }).start();
 
 
     }

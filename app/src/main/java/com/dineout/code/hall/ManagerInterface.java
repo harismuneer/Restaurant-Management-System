@@ -1,5 +1,6 @@
 package com.dineout.code.hall;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -23,6 +24,7 @@ import com.dineout.code.hall.DB.Menu;
 
 import com.dineout.R;
 
+import com.dineout.code.reporting.EndOfDay_EventHandler;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -33,6 +35,7 @@ import java.util.ArrayList;
 
 public class ManagerInterface extends AppCompatActivity {
 
+    Context context = this;
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference memployeereference;
     FirebaseDatabase mFirebaseDatabase2;
@@ -75,7 +78,10 @@ public class ManagerInterface extends AppCompatActivity {
 
         Button button6 = (Button) findViewById(R.id.button6);
         button6.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View V) {
+            public void onClick(View V)
+            {
+                EndOfDay_EventHandler handler = new EndOfDay_EventHandler(context,null);
+                handler.HandleCloseDayEvent();
                 Toast.makeText(ManagerInterface.this, "Notification sent to Reporting Module",Toast.LENGTH_SHORT).show();
             }
         });
