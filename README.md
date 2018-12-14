@@ -65,7 +65,7 @@ In order to have a look at the code files and understand the working, simply dow
 
 ---
 ## 👨🏼‍💻 Contributors
-It was really fun to work with these techies to get the job done:
+It was really fun to work with these geeks to get the job done:
 
 * [Hassaan Elahi](https://github.com/Hassaan-Elahi)
 * [Mahnoor Kashif](https://github.com/mahnoorkashif)
