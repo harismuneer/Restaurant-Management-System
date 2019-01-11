@@ -17,12 +17,21 @@ This is an **Android app** that allows its users to keep track of their journey 
 ## Screenshots of Interfaces and their Description
 
 <p align="middle">
-  <img src="../master/images/s1.png"/>
+  <img src="../master/images/1.PNG"/>
  </p>
  
  <p align="middle">
-  <img src="../master/images/s2.png"/>
+  <img src="../master/images/2.PNG"/>
  </p>
+
+<p align="middle">
+  <img src="../master/images/3.PNG"/>
+ </p>
+ 
+ <p align="middle">
+  <img src="../master/images/4.PNG"/>
+ </p>
+
 
 ## Functionalities
 
@@ -88,6 +97,11 @@ If you liked the repo then kindly support it by giving it a star ⭐!
 If you find any bug in the code or have any improvements in mind then feel free to generate a pull request.
 
 ## Issues
-[![GitHub Issues](https://img.shields.io/github/issues/harismuneer/Wanderlust-The-Travellers-App.svg?style=flat&label=Issues&maxAge=2592000)](https://www.github.com/harismuneer/Wanderlust-The-Travellers-App/issues)
+[![GitHub Issues](https://img.shields.io/github/issues/harismuneer/Restaurant-Management-System.svg?style=flat&label=Issues&maxAge=2592000)](https://www.github.com/harismuneer/Restaurant-Management-System/issues)
 
 If you face any issue, you can create a new issue in the Issues Tab and I will be glad to help you out.
+
+## License
+[![MIT](https://img.shields.io/cocoapods/l/AFNetworking.svg?style=style&label=License&maxAge=2592000)](../master/LICENSE)
+
+Copyright (c) 2018-present, harismuneer, Hassaan-Elahi, mahnoorkashif, shafaq15, rmsharks4, marriamsajid                                                        
