@@ -61,6 +61,14 @@ In order to have a look at the code files and understand the working, simply dow
 
 Before running the app, use your Google Account to register this Application on Firebase Console, with any name you want. I have provided a copy of the **Firebase Database** [Firebase Realtime DB Backup](../master/database/Firebase%20Realtime%20DB%20Backup.json). Download it and import it in the Firebase console. Then you will have a working Database for the app. After that using your Google Account, login to Android Studio. Then you can run the project.
 
+The login credentials for Admin, Hall and Kitchen Manager's interfaces are:
+- admin@gmail.com
+- chef@gmail.com
+- hallmanager@gmail.com
+
+All have the password: 123456
+
+
 ---
 ## 👨🏼‍💻 Contributors
 It was really fun to work with these geeks to get the job done:
