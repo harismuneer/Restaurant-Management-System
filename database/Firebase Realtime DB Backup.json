@@ -1,0 +1,1168 @@
+{
+  "Assignment" : [ {
+    "employeeid" : "0",
+    "tableID" : "0",
+    "tabletID" : "0"
+  } ],
+  "Attendance" : {
+    "2" : {
+      "id" : "2",
+      "present" : true
+    },
+    "4" : {
+      "id" : "4",
+      "present" : true
+    },
+    "9" : {
+      "id" : "9",
+      "present" : true
+    },
+    "10" : {
+      "id" : "10",
+      "present" : true
+    },
+    "11" : {
+      "id" : "11",
+      "present" : true
+    },
+    "12" : {
+      "id" : "12",
+      "present" : true
+    }
+  },
+  "Date" : {
+    "date" : "06-12-2018"
+  },
+  "Employee" : [ null, {
+    "id" : "1",
+    "name" : "rtt",
+    "password" : "",
+    "salary" : "555",
+    "specialty" : "",
+    "type" : "Waiter"
+  }, null, {
+    "email" : "",
+    "id" : "3",
+    "name" : "ffff",
+    "password" : "",
+    "salary" : "8888",
+    "specialty" : "",
+    "type" : "Waiter"
+  }, null, null, null, {
+    "email" : "chef@gmail.com",
+    "id" : "7",
+    "name" : "Head Chef",
+    "password" : "123456",
+    "salary" : "50000",
+    "specialty" : "xyz",
+    "type" : "Head Chef"
+  }, {
+    "email" : "hallmanager@gmail.com",
+    "id" : "8",
+    "name" : "Hall manager",
+    "password" : "123456",
+    "salary" : "30000",
+    "specialty" : "",
+    "type" : "Hall Manager"
+  }, {
+    "email" : "",
+    "id" : "9",
+    "name" : "Ali",
+    "password" : "",
+    "salary" : "45000",
+    "specialty" : "Continental",
+    "type" : "Chef"
+  }, {
+    "email" : "",
+    "id" : "10",
+    "name" : "Haroon",
+    "password" : "",
+    "salary" : "50000",
+    "specialty" : "Desi",
+    "type" : "Chef"
+  }, {
+    "email" : "",
+    "id" : "11",
+    "name" : "Hamza",
+    "password" : "",
+    "salary" : "35000",
+    "specialty" : "Desi",
+    "type" : "Chef"
+  }, {
+    "email" : "",
+    "id" : "12",
+    "name" : "Rashid",
+    "password" : "",
+    "salary" : "38000",
+    "specialty" : "Desi",
+    "type" : "Chef"
+  }, {
+    "email" : "",
+    "id" : "13",
+    "name" : "pop",
+    "password" : "",
+    "salary" : "20",
+    "specialty" : "",
+    "type" : "Waiter"
+  } ],
+  "EndOfWeek" : "Monday",
+  "Feedback" : {
+    "1" : {
+      "comments" : "fjcj",
+      "email" : "786nimraarif786@gmail.com",
+      "orderid" : "1",
+      "rating" : 3
+    },
+    "2" : {
+      "comments" : "",
+      "email" : "rmsgu@gmsy.com",
+      "orderid" : "2",
+      "rating" : 0
+    },
+    "41" : {
+      "comments" : "nice nice\n",
+      "email" : "nabeel95.mehmood@gmail.com",
+      "orderid" : "41",
+      "rating" : 3.5
+    }
+  },
+  "Ids" : {
+    "Employeeid" : 14,
+    "Tableid" : 15,
+    "Tabletid" : 14
+  },
+  "Inventory" : {
+    "Beef" : {
+      "name" : "Beef",
+      "price" : "100",
+      "quantity" : "2",
+      "threshold" : "10"
+    },
+    "Bread" : {
+      "name" : "Bread",
+      "price" : "100",
+      "quantity" : "0",
+      "threshold" : "10"
+    },
+    "Cabbage" : {
+      "name" : "Cabbage",
+      "price" : "100",
+      "quantity" : "18",
+      "threshold" : "10"
+    },
+    "Carrot" : {
+      "name" : "Carrot",
+      "price" : "25",
+      "quantity" : "0",
+      "threshold" : "5"
+    },
+    "Cheese" : {
+      "name" : "Cheese",
+      "price" : "100",
+      "quantity" : "1",
+      "threshold" : "10"
+    },
+    "Chicken" : {
+      "name" : "Chicken",
+      "price" : "100",
+      "quantity" : "11",
+      "threshold" : "10"
+    },
+    "Egg" : {
+      "name" : "Egg",
+      "price" : "100",
+      "quantity" : "18",
+      "threshold" : "10"
+    },
+    "Mushroom" : {
+      "name" : "Mushroom",
+      "price" : "100",
+      "quantity" : "20",
+      "threshold" : "10"
+    },
+    "Oil" : {
+      "name" : "Oil",
+      "price" : "456",
+      "quantity" : "1",
+      "threshold" : "5"
+    },
+    "Olive" : {
+      "name" : "Olive",
+      "price" : "100",
+      "quantity" : "18",
+      "threshold" : "10"
+    },
+    "Pepperoni" : {
+      "name" : "Pepperoni",
+      "price" : "100",
+      "quantity" : "11",
+      "threshold" : "10"
+    },
+    "Salad" : {
+      "name" : "Salad",
+      "price" : "100",
+      "quantity" : "18",
+      "threshold" : "10"
+    },
+    "Tomato" : {
+      "name" : "Tomato",
+      "price" : "100",
+      "quantity" : "11",
+      "threshold" : "10"
+    },
+    "Turkey" : {
+      "name" : "Turkey",
+      "price" : "100",
+      "quantity" : "14",
+      "threshold" : "10"
+    },
+    "ice" : {
+      "name" : "ice",
+      "price" : "25",
+      "quantity" : "30",
+      "threshold" : "20"
+    }
+  },
+  "Menu" : {
+    "Burger" : {
+      "dishName" : "Burger",
+      "estimatedTime" : "20",
+      "price" : "500",
+      "type" : "Main Course"
+    },
+    "Chiken baryani " : {
+      "dishName" : "Chiken baryani ",
+      "estimatedTime" : "45",
+      "price" : "450",
+      "type" : "Desi"
+    },
+    "Chocolate" : {
+      "dishName" : "Chocolate",
+      "estimatedTime" : "100",
+      "price" : "500",
+      "type" : "Desert"
+    },
+    "Coconut" : {
+      "dishName" : "Coconut",
+      "estimatedTime" : "30",
+      "price" : "250",
+      "type" : "salad"
+    },
+    "Fish" : {
+      "dishName" : "Fish",
+      "estimatedTime" : "30",
+      "price" : "30",
+      "type" : "sea food"
+    },
+    "Fries" : {
+      "dishName" : "Fries",
+      "estimatedTime" : "15",
+      "price" : "150",
+      "type" : "Starter"
+    },
+    "Hot Dog" : {
+      "dishName" : "Hot Dog",
+      "estimatedTime" : "20",
+      "price" : "150",
+      "type" : "Appetizer"
+    },
+    "Pineapple" : {
+      "dishName" : "Pineapple",
+      "estimatedTime" : "20",
+      "price" : "250",
+      "type" : "Desert"
+    },
+    "Pizza" : {
+      "dishName" : "Pizza",
+      "estimatedTime" : "20",
+      "price" : "800",
+      "type" : "Main Course"
+    },
+    "Soup" : {
+      "dishName" : "Soup",
+      "estimatedTime" : "20",
+      "price" : "500",
+      "type" : "Starter"
+    },
+    "Strawberries" : {
+      "dishName" : "Strawberries",
+      "estimatedTime" : "45",
+      "price" : "100",
+      "type" : "Desert"
+    },
+    "Test dish" : {
+      "dishName" : "Test dish",
+      "estimatedTime" : "20",
+      "price" : "300",
+      "type" : "xyz"
+    },
+    "xyz" : {
+      "dishName" : "xyz",
+      "estimatedTime" : "2000",
+      "price" : "0",
+      "type" : "xtz"
+    }
+  },
+  "MenuItem" : {
+    "Burger" : {
+      "Beef" : {
+        "dishName" : "Burger",
+        "ingredientName" : "Beef",
+        "quantity" : "5"
+      },
+      "Bread" : {
+        "dishName" : "Burger",
+        "ingredientName" : "Bread",
+        "quantity" : "2"
+      },
+      "Cabbage" : {
+        "dishName" : "Burger",
+        "ingredientName" : "Cabbage",
+        "quantity" : "2"
+      },
+      "Cheese" : {
+        "dishName" : "Burger",
+        "ingredientName" : "Cheese",
+        "quantity" : "2"
+      },
+      "Egg" : {
+        "dishName" : "Burger",
+        "ingredientName" : "Egg",
+        "quantity" : "2"
+      },
+      "Salad" : {
+        "dishName" : "Burger",
+        "ingredientName" : "Salad",
+        "quantity" : "2"
+      },
+      "Turkey" : {
+        "dishName" : "Burger",
+        "ingredientName" : "Turkey",
+        "quantity" : "3"
+      }
+    },
+    "Fish" : {
+      "Beef" : {
+        "dishName" : "Fish",
+        "ingredientName" : "Beef",
+        "quantity" : "20"
+      }
+    },
+    "Hot Dog" : {
+      "Bread" : {
+        "dishName" : "Hot Dog",
+        "ingredientName" : "Bread",
+        "quantity" : "2"
+      },
+      "Pepperoni" : {
+        "dishName" : "Hot Dog",
+        "ingredientName" : "Pepperoni",
+        "quantity" : "1"
+      }
+    },
+    "Pizza" : {
+      "Beef" : {
+        "dishName" : "Pizza",
+        "ingredientName" : "Beef",
+        "quantity" : "2"
+      },
+      "Bread" : {
+        "dishName" : "Pizza",
+        "ingredientName" : "Bread",
+        "quantity" : "8"
+      },
+      "Cheese" : {
+        "dishName" : "Pizza",
+        "ingredientName" : "Cheese",
+        "quantity" : "7"
+      },
+      "Chicken" : {
+        "dishName" : "Pizza",
+        "ingredientName" : "Chicken",
+        "quantity" : "3"
+      },
+      "Mushroom" : {
+        "dishName" : "Pizza",
+        "ingredientName" : "Mushroom",
+        "quantity" : "10"
+      },
+      "Olive" : {
+        "dishName" : "Pizza",
+        "ingredientName" : "Olive",
+        "quantity" : "8"
+      },
+      "Pepperoni" : {
+        "dishName" : "Pizza",
+        "ingredientName" : "Pepperoni",
+        "quantity" : "6"
+      },
+      "Tomato" : {
+        "dishName" : "Pizza",
+        "ingredientName" : "Tomato",
+        "quantity" : "3"
+      }
+    },
+    "Soup" : {
+      "Custard" : {
+        "dishName" : "Soup",
+        "ingredientName" : "Custard",
+        "quantity" : "2"
+      },
+      "Oil" : {
+        "dishName" : "Soup",
+        "ingredientName" : "Oil",
+        "quantity" : "3"
+      }
+    },
+    "Test dish" : {
+      "test item" : {
+        "dishName" : "Test dish",
+        "ingredientName" : "test item",
+        "quantity" : "5"
+      }
+    },
+    "xyz" : {
+      "Tomato" : {
+        "dishName" : "xyz",
+        "ingredientName" : "Tomato",
+        "quantity" : "55"
+      }
+    }
+  },
+  "Order" : {
+    "1" : {
+      "id" : "1",
+      "status" : 2,
+      "timestamp" : "2018-12-06 03:42:22.103"
+    },
+    "2" : {
+      "status" : 4
+    },
+    "4" : {
+      "id" : "4",
+      "status" : 3,
+      "tableID" : "4",
+      "timestamp" : "2018-12-06 11:48:58.088"
+    },
+    "5" : {
+      "id" : "5",
+      "status" : 1,
+      "tableID" : "1",
+      "timestamp" : "2018-12-06 01:51:58.088"
+    },
+    "6" : {
+      "id" : "6",
+      "status" : 3,
+      "tableID" : "2",
+      "timestamp" : "2018-12-06 01:49:38.080"
+    },
+    "7" : {
+      "id" : "7",
+      "status" : 4,
+      "tableID" : "3",
+      "timestamp" : "2018-12-06 01:48:58.087"
+    },
+    "8" : {
+      "id" : "8",
+      "status" : 4,
+      "tableID" : "4",
+      "timestamp" : "2018-12-06 01:48:58.054"
+    },
+    "9" : {
+      "id" : "9",
+      "status" : 1,
+      "tableID" : "1",
+      "timestamp" : "2018-12-06 01:48:18.088"
+    },
+    "19" : {
+      "id" : "19",
+      "status" : 4,
+      "tableID" : "3",
+      "timestamp" : "2018-12-06 11:38:58.088"
+    },
+    "20" : {
+      "id" : "20",
+      "status" : 4,
+      "tableID" : "4",
+      "timestamp" : "2018-12-06 01:48:58.088"
+    },
+    "21" : {
+      "id" : "21",
+      "status" : 1,
+      "tableID" : "1",
+      "timestamp" : "1970-01-19 01:49:01.467"
+    },
+    "22" : {
+      "id" : "22",
+      "status" : 3,
+      "tableID" : "2",
+      "timestamp" : "1970-01-19 01:49:01.467"
+    },
+    "23" : {
+      "id" : "23",
+      "status" : 3,
+      "tableID" : "3",
+      "timestamp" : "1970-01-19 01:49:01.467"
+    },
+    "24" : {
+      "id" : "24",
+      "status" : 4,
+      "tableID" : "4",
+      "timestamp" : "1970-01-19 01:49:01.467"
+    },
+    "31" : {
+      "id" : "31",
+      "status" : 3,
+      "tableID" : "1",
+      "timestamp" : "1970-01-19 01:49:02.565"
+    },
+    "500" : {
+      "id" : "500",
+      "status" : 4,
+      "tableID" : "4",
+      "timestamp" : "1970-01-19 01:54:37.65"
+    },
+    "501" : {
+      "id" : "501",
+      "status" : 2,
+      "tableID" : "4",
+      "timestamp" : "1970-01-19 01:54:37.65"
+    },
+    "502" : {
+      "id" : "502",
+      "status" : 4,
+      "tableID" : "4",
+      "timestamp" : "1970-01-19 01:54:37.65"
+    },
+    "503" : {
+      "id" : "503",
+      "status" : 2,
+      "tableID" : "4",
+      "timestamp" : "1970-01-19 01:54:37.65"
+    },
+    "504" : {
+      "id" : "504",
+      "status" : 2,
+      "tableID" : "4",
+      "timestamp" : "1970-01-19 01:54:37.65"
+    },
+    "505" : {
+      "id" : "505",
+      "status" : 1,
+      "tableID" : "4",
+      "timestamp" : "1970-01-19 01:54:37.65"
+    },
+    "-LT-XNtUN7HpI9mpG37J" : {
+      "id" : "1",
+      "status" : 2,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 03:42:22.103"
+    },
+    "-LT-_jKRwwyAvGdYT6ZQ" : {
+      "id" : "1",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 03:57:00.402"
+    },
+    "-LT-au5rpcFjvoqLjafn" : {
+      "id" : "1",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 04:02:06.661"
+    },
+    "-LT-caFBikGWTkob_27-" : {
+      "id" : "1",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 04:09:29.613"
+    },
+    "-LT-gXBErMaLAoBVrRaT" : {
+      "id" : "1",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 04:26:41.529"
+    },
+    "-LT-iGGGdBNNX1Mf2s9G" : {
+      "id" : "1",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 04:34:16.53"
+    },
+    "-LT0lfBGFSSgapfUDKxo" : {
+      "id" : "1",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 09:28:38.709"
+    },
+    "-LT1872GKpOgL2rWj2wz" : {
+      "id" : "1",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 11:11:28.638"
+    },
+    "-LT19k1Eq3gBHqtjjvBY" : {
+      "id" : "1",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 11:18:11.451"
+    },
+    "-LT19qkQI_qIJZrvgeiL" : {
+      "id" : "2",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 11:18:38.983"
+    },
+    "-LT1BIHXpbyr5LLb6zWm" : {
+      "id" : "1",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 11:24:58.003"
+    },
+    "-LT1FrT4D1I-8hjhwcKO" : {
+      "id" : "1",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 11:44:54.333"
+    },
+    "-LT1GBxmtKjBVqfEYjle" : {
+      "id" : "2",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 11:46:22.379"
+    },
+    "-LT1GuHzWXDWoBmn08fk" : {
+      "id" : "3",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 11:49:28.055"
+    },
+    "-LT1HYdqjY6An76oH2Ue" : {
+      "id" : "4",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 11:52:17.455"
+    },
+    "-LT1HlDKSw1C3djaCfQf" : {
+      "id" : "5",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 11:53:13.037"
+    },
+    "-LT1HuvW9kxTfGg5Itll" : {
+      "id" : "6",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 11:53:52.793"
+    },
+    "-LT1HyV8YPFzz1iJ_r6E" : {
+      "id" : "1",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 11:54:07.644"
+    },
+    "-LT1w1koSaKdO_bw3S3r" : {
+      "id" : "1",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-06 14:53:33.959"
+    },
+    "-LTD0nlUol3n9QKmRDcC" : {
+      "id" : "1",
+      "status" : 1,
+      "tabletID" : "4",
+      "timestamp" : "2018-12-08 18:34:37.129"
+    }
+  },
+  "OrderDetails" : {
+    "-LT0tB9onjV1tgIewXu8" : {
+      "dishname" : "Pizza",
+      "estimatedtime" : 260,
+      "orderid" : "505",
+      "priority" : 0,
+      "servings" : 3,
+      "status" : 2
+    },
+    "-LT0tBA5YLiZJSq7gJF-" : {
+      "dishname" : "Hot Dog",
+      "estimatedtime" : 20,
+      "orderid" : "504",
+      "priority" : 0,
+      "servings" : 3,
+      "status" : 3
+    },
+    "-LT0tBA8N6PqkCqg92oz" : {
+      "dishname" : "Burger",
+      "estimatedtime" : 20,
+      "orderid" : "502",
+      "priority" : 0,
+      "servings" : 3,
+      "status" : 4
+    },
+    "-LT0tS1ccQKa2fV8RmOC" : {
+      "dishname" : "Pizza",
+      "estimatedtime" : 40,
+      "orderid" : "500",
+      "priority" : 1,
+      "servings" : -2,
+      "status" : 4
+    },
+    "-LT0tS1ht7vg3CdSQXaz" : {
+      "dishname" : "Pizza",
+      "estimatedtime" : 40,
+      "orderid" : "500",
+      "priority" : 1,
+      "servings" : 1,
+      "status" : 4
+    },
+    "-LT0tS1nE0x6aMFpTxMa" : {
+      "dishname" : "Pizza",
+      "estimatedtime" : 20,
+      "orderid" : "500",
+      "priority" : 1,
+      "servings" : 1,
+      "status" : 4
+    },
+    "-LT0twgfSrK6YCqRxbuy" : {
+      "dishname" : "Pizza",
+      "estimatedtime" : 60,
+      "orderid" : "505",
+      "priority" : 0,
+      "servings" : 1,
+      "status" : 2
+    },
+    "-LT0twgmi5gm9CSVkqtE" : {
+      "dishname" : "Pizza",
+      "estimatedtime" : 20,
+      "orderid" : "500",
+      "priority" : 0,
+      "servings" : 3,
+      "status" : 4
+    },
+    "-LT0twgqwGfnsRjkRAZD" : {
+      "dishname" : "Hot Dog",
+      "estimatedtime" : 20,
+      "orderid" : "501",
+      "priority" : 0,
+      "servings" : 3,
+      "status" : 3
+    },
+    "-LT0twgt2omYN4GeGq5a" : {
+      "dishname" : "Hot Dog",
+      "estimatedtime" : 20,
+      "orderid" : "504",
+      "priority" : 0,
+      "servings" : 3,
+      "status" : 3
+    },
+    "-LT0twgvddM3CHhU5_Xj" : {
+      "dishname" : "Burger",
+      "estimatedtime" : 20,
+      "orderid" : "502",
+      "priority" : 0,
+      "servings" : 3,
+      "status" : 4
+    },
+    "-LT0uQF5ktBYQZJIpf3v" : {
+      "dishname" : "Burger",
+      "estimatedtime" : 20,
+      "orderid" : "503",
+      "priority" : 1,
+      "servings" : 1,
+      "status" : 1
+    },
+    "-LT0uQJ2uNicYQGx5Qul" : {
+      "dishname" : "Burger",
+      "estimatedtime" : 80,
+      "orderid" : "503",
+      "priority" : 1,
+      "servings" : 1,
+      "status" : 0
+    },
+    "-LT0uQJEvkuNYK7-hvbk" : {
+      "dishname" : "Burger",
+      "estimatedtime" : 60,
+      "orderid" : "503",
+      "priority" : 1,
+      "servings" : 1,
+      "status" : 0
+    },
+    "-LT0vXpwBhNCI--k2fXj" : {
+      "dishname" : "Burger",
+      "estimatedtime" : 20,
+      "orderid" : "503",
+      "priority" : 1,
+      "servings" : 1,
+      "status" : 1
+    },
+    "-LT0vXq0wpTmDFCh3vHw" : {
+      "dishname" : "Burger",
+      "estimatedtime" : 60,
+      "orderid" : "503",
+      "priority" : 1,
+      "servings" : 1,
+      "status" : 0
+    },
+    "-LT0vXq6NotEmyu_-0fU" : {
+      "dishname" : "Burger",
+      "estimatedtime" : 40,
+      "orderid" : "503",
+      "priority" : 1,
+      "servings" : 1,
+      "status" : 1
+    },
+    "-LT0vi5oZJftq0x_KaqR" : {
+      "dishname" : "Hot Dog",
+      "estimatedtime" : 120,
+      "orderid" : "501",
+      "priority" : 1,
+      "servings" : 1,
+      "status" : 0
+    },
+    "-LT0vi8_0ZbTEpIpHwGD" : {
+      "dishname" : "Hot Dog",
+      "estimatedtime" : 160,
+      "orderid" : "501",
+      "priority" : 1,
+      "servings" : 1,
+      "status" : 0
+    },
+    "-LT0wL2puB3yURp6ElzE" : {
+      "dishname" : "Pizza",
+      "estimatedtime" : 100,
+      "orderid" : "500",
+      "priority" : 1,
+      "servings" : 1,
+      "status" : 4
+    },
+    "-LT1872KWq18LGdtRfNF" : {
+      "dishname" : "Hot Dog",
+      "estimatedtime" : 85,
+      "orderid" : "1",
+      "priority" : 0,
+      "servings" : 1,
+      "status" : 0
+    },
+    "-LT19k1LD5uHpw8RLC4H" : {
+      "dishname" : "Chocolate",
+      "estimatedtime" : 320,
+      "orderid" : "1",
+      "priority" : 0,
+      "servings" : 0,
+      "status" : 0
+    },
+    "-LT19qkSZWqFK6QavpFm" : {
+      "dishname" : "Burger",
+      "estimatedtime" : 120,
+      "orderid" : "2",
+      "priority" : 0,
+      "servings" : 1,
+      "status" : 4
+    },
+    "-LT1B6yPGZkG4E2LgiZC" : {
+      "dishname" : "Pizza",
+      "estimatedtime" : 120,
+      "orderid" : "500",
+      "priority" : 1,
+      "servings" : 2,
+      "status" : 4
+    },
+    "-LT1BIHZ12LKBLOgK9FH" : {
+      "dishname" : "Chiken baryani ",
+      "estimatedtime" : 1235,
+      "orderid" : "1",
+      "priority" : 0,
+      "servings" : 1,
+      "status" : 2
+    },
+    "-LT1FrT8RvhCtfyedKO5" : {
+      "dishname" : "Burger",
+      "estimatedtime" : 140,
+      "orderid" : "1",
+      "priority" : 0,
+      "servings" : 0,
+      "status" : 0
+    },
+    "-LT1GBxoOQYf30RlEzfd" : {
+      "dishname" : "Soup",
+      "estimatedtime" : 0,
+      "orderid" : "2",
+      "priority" : 0,
+      "servings" : 1,
+      "status" : 4
+    },
+    "-LT1GuI-Sr5lha28E-6r" : {
+      "dishname" : "Strawberries",
+      "estimatedtime" : 155,
+      "orderid" : "3",
+      "priority" : 0,
+      "servings" : 2,
+      "status" : 0
+    },
+    "-LT1HYdrBheqREa2Co5B" : {
+      "dishname" : "Strawberries",
+      "estimatedtime" : 90,
+      "orderid" : "4",
+      "priority" : 0,
+      "servings" : 1,
+      "status" : 0
+    },
+    "-LT1HlDL8B4HkVf0z7km" : {
+      "dishname" : "Test dish",
+      "estimatedtime" : 185,
+      "orderid" : "5",
+      "priority" : 0,
+      "servings" : 1,
+      "status" : 0
+    },
+    "-LT1HuvXGJaitXeHXYTr" : {
+      "dishname" : "Chocolate",
+      "estimatedtime" : 140,
+      "orderid" : "6",
+      "priority" : 0,
+      "servings" : 1,
+      "status" : 0
+    },
+    "-LT1HyVEwnWv3voDA_9F" : {
+      "dishname" : "Chocolate",
+      "estimatedtime" : 310,
+      "orderid" : "1",
+      "priority" : 0,
+      "servings" : 0,
+      "status" : 0
+    },
+    "-LT1w1ktNEwlOhrYCEO1" : {
+      "dishname" : "Strawberries",
+      "estimatedtime" : 230,
+      "orderid" : "1",
+      "priority" : 0,
+      "servings" : 1,
+      "status" : 0
+    },
+    "-LTD0nl_zsEmvSgezst5" : {
+      "dishname" : "Chiken baryani ",
+      "estimatedtime" : 190,
+      "orderid" : "1",
+      "priority" : 0,
+      "servings" : 1,
+      "status" : 0
+    }
+  },
+  "Receipt" : {
+    "1" : {
+      "orderid" : "1",
+      "paid" : 0,
+      "totalamount" : 3000
+    },
+    "2" : {
+      "orderid" : "2",
+      "paid" : 1,
+      "totalamount" : 1000
+    },
+    "3" : {
+      "orderid" : "3",
+      "paid" : 1,
+      "totalamount" : 0
+    },
+    "4" : {
+      "orderid" : "4",
+      "paid" : 0,
+      "totalamount" : 0
+    },
+    "6" : {
+      "orderid" : "6",
+      "paid" : 1,
+      "totalamount" : 0
+    },
+    "7" : {
+      "orderid" : "7",
+      "paid" : 1,
+      "totalamount" : 0
+    },
+    "8" : {
+      "orderid" : "8",
+      "paid" : 1,
+      "totalamount" : 0
+    },
+    "19" : {
+      "orderid" : "19",
+      "paid" : 1,
+      "totalamount" : 0
+    },
+    "33" : {
+      "orderid" : "33",
+      "paid" : 1,
+      "totalamount" : 0
+    },
+    "42" : {
+      "orderid" : "42",
+      "paid" : 1,
+      "totalamount" : 0
+    },
+    "43" : {
+      "orderid" : "43",
+      "paid" : 1,
+      "totalamount" : 0
+    },
+    "51" : {
+      "orderid" : "51",
+      "paid" : 1,
+      "totalamount" : 0
+    },
+    "100" : {
+      "orderid" : "100",
+      "paid" : 0,
+      "totalamount" : 30
+    },
+    "101" : {
+      "orderid" : "101",
+      "paid" : 1,
+      "totalamount" : 30
+    },
+    "201" : {
+      "orderid" : "201",
+      "paid" : 0,
+      "totalamount" : 30
+    },
+    "204" : {
+      "orderid" : "204",
+      "paid" : 0,
+      "totalamount" : 30
+    },
+    "301" : {
+      "orderid" : "301",
+      "paid" : 0,
+      "totalamount" : 30
+    },
+    "304" : {
+      "orderid" : "304",
+      "paid" : 0,
+      "totalamount" : 30
+    },
+    "401" : {
+      "orderid" : "401",
+      "paid" : 0,
+      "totalamount" : 30
+    },
+    "404" : {
+      "orderid" : "404",
+      "paid" : 0,
+      "totalamount" : 30
+    },
+    "500" : {
+      "orderid" : "500",
+      "paid" : 1,
+      "totalamount" : 4800
+    },
+    "501" : {
+      "orderid" : "501",
+      "paid" : 0,
+      "totalamount" : 30
+    },
+    "504" : {
+      "orderid" : "504",
+      "paid" : 0,
+      "totalamount" : 30
+    }
+  },
+  "Table" : {
+    "1" : {
+      "capacity" : "2",
+      "status" : "Booked",
+      "tableID" : "1"
+    },
+    "2" : {
+      "capacity" : "4",
+      "status" : "Booked",
+      "tableID" : "2"
+    },
+    "3" : {
+      "capacity" : "8",
+      "status" : "Occupied",
+      "tableID" : "3"
+    },
+    "10" : {
+      "capacity" : "20",
+      "status" : "Free",
+      "tableID" : "10"
+    },
+    "14" : {
+      "capacity" : "258",
+      "status" : "Free",
+      "tableID" : "14"
+    }
+  },
+  "Tablet" : {
+    "1" : {
+      "status" : "In Use",
+      "tabletID" : "1"
+    },
+    "2" : {
+      "status" : "In Use",
+      "tabletID" : "2"
+    },
+    "3" : {
+      "status" : "Broken",
+      "tabletID" : "3"
+    },
+    "4" : {
+      "status" : "In Use",
+      "tabletID" : "4"
+    },
+    "5" : {
+      "status" : "In Use",
+      "tabletID" : "5"
+    },
+    "6" : {
+      "status" : "In Use",
+      "tabletID" : "6"
+    },
+    "7" : {
+      "status" : "In Use",
+      "tabletID" : "7"
+    },
+    "12" : {
+      "status" : "In Use",
+      "tabletID" : "12"
+    },
+    "13" : {
+      "status" : "In Use",
+      "tabletID" : "13"
+    },
+    "null" : {
+      "status" : "Available",
+      "tabletID" : "null"
+    }
+  },
+  "notification" : {
+    "-LSsd2K2dfD3WhTABsG4" : {
+      "itemName" : "fgh",
+      "read" : true,
+      "time" : "14:54"
+    },
+    "-LSsd9bbEmDS1ESJPyiX" : {
+      "itemName" : "oil",
+      "read" : true,
+      "time" : "14:55"
+    },
+    "-LSsg63i7LAQRU36vrPL" : {
+      "itemName" : "banana",
+      "read" : true,
+      "time" : "15:08"
+    },
+    "-LSsgcMrWElHv6HHaqeQ" : {
+      "itemName" : "apple",
+      "read" : true,
+      "time" : "15:10"
+    },
+    "-LT-6oeiV7rpIeStHzb7" : {
+      "itemName" : "sup",
+      "read" : true,
+      "time" : "01:46"
+    },
+    "-LT19nTAQIkStW6gfCk-" : {
+      "itemName" : "Beef",
+      "read" : true,
+      "time" : "11:18"
+    }
+  }
+}

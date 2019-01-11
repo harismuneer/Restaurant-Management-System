@@ -16,7 +16,6 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:textColor="@android:color/holo_orange_dark"
-
     >
         <requestFocus />
 
