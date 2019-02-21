@@ -86,7 +86,7 @@ You can get in touch with me on my LinkedIn Profile: [![LinkedIn Link](https://i
 
 You can also follow my GitHub Profile to stay updated about my latest projects: [![GitHub Follow](https://img.shields.io/badge/Connect-harismuneer-blue.svg?logo=Github&longCache=true&style=social&label=Follow)](https://github.com/harismuneer)
 
-If you liked the repo then kindly support it by giving it a star ⭐!
+If you liked the repo then please support it by giving it a star ⭐!
 
 ## Contributions Welcome
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](#)
