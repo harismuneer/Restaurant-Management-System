@@ -17,6 +17,23 @@ would be performed in less amount of time and more efficiently. An additional be
 This application was developed as a final project for our **Software Engineering (CS303)** Course. The whole class was divided into teams of 4-5 members and each team was assigned a particular module of this Restaurant Management System. Besides coding our own module, at the end, **our team was also given the responsibility to meet other teams, discuss and resolve the issues that they are facing in the application and ultimately take their developed modules and integrate all the modules together into one working application**. This exercise made us familiar with the issues that occur during the integration of modules in real software projects like following consistent database schema, variable names, libraries versions etc.
 
 
+---
+## 👨🏼‍💻 Contributors
+It was really fun to work with these awesome geeks to get the job done:
+
+* [Ramsha Siddiqui](https://github.com/Rmsharks4)
+* [Hassaan Elahi](https://github.com/Hassaan-Elahi)
+* [Mahnoor Kashif](https://github.com/mahnoorkashif)
+* [Shafaq Arshad](https://github.com/Shafaq15)
+* [Marriam Sajid](https://github.com/marriamsajid)
+* All members of the Software Engineering class of Spring 2018 :)
+
+
+If you liked the repo then please support it by giving it a star ⭐!
+
+---
+
+
 ## User Classes and Characteristics
 There are **five** types of users for our system. 
 
@@ -66,24 +83,6 @@ The login credentials for Admin, Hall and Kitchen Manager's interfaces are:
 - hallmanager@gmail.com
 
 All have the password: 123456
-
-
----
-## 👨🏼‍💻 Contributors
-It was really fun to work with these awesome geeks to get the job done:
-
-* [Ramsha Siddiqui](https://github.com/Rmsharks4)
-* [Hassaan Elahi](https://github.com/Hassaan-Elahi)
-* [Mahnoor Kashif](https://github.com/mahnoorkashif)
-* [Shafaq Arshad](https://github.com/Shafaq15)
-* [Marriam Sajid](https://github.com/marriamsajid)
-* All members of the Software Engineering class of Spring 2018 :)
-
-
-If you liked the repo then please support it by giving it a star ⭐!
-
----
-
 
 ## Contributions Welcome
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](#)
