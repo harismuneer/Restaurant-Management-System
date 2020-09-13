@@ -28,9 +28,6 @@ It was really fun to work with these awesome geeks to get the job done:
 * [Marriam Sajid](https://github.com/marriamsajid)
 * All members of the Software Engineering class of Spring 2018 :)
 
-
-If you liked the repo then please support it by giving it a star ⭐!
-
 ---
 
 
