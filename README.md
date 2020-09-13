@@ -70,22 +70,20 @@ All have the password: 123456
 
 ---
 ## 👨🏼‍💻 Contributors
-It was really fun to work with these geeks to get the job done:
+It was really fun to work with these awesome geeks to get the job done:
 
+* [Ramsha Siddiqui](https://github.com/Rmsharks4)
 * [Hassaan Elahi](https://github.com/Hassaan-Elahi)
 * [Mahnoor Kashif](https://github.com/mahnoorkashif)
-* [Ramsha Siddiqui](https://github.com/Rmsharks4)
 * [Shafaq Arshad](https://github.com/Shafaq15)
 * [Marriam Sajid](https://github.com/marriamsajid)
----
+* All members of the Software Engineering class of Spring 2018 :)
 
-## My Contact
-You can get in touch with me on my LinkedIn Profile: [![LinkedIn Link](https://img.shields.io/badge/Connect-harismuneer-blue.svg?logo=linkedin&longCache=true&style=social&label=Connect
-)](https://www.linkedin.com/in/harismuneer)
-
-You can also follow my GitHub Profile to stay updated about my latest projects: [![GitHub Follow](https://img.shields.io/badge/Connect-harismuneer-blue.svg?logo=Github&longCache=true&style=social&label=Follow)](https://github.com/harismuneer)
 
 If you liked the repo then please support it by giving it a star ⭐!
+
+---
+
 
 ## Contributions Welcome
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](#)
@@ -100,4 +98,4 @@ If you face any issue, you can create a new issue in the Issues Tab and I will b
 ## License
 [![MIT](https://img.shields.io/cocoapods/l/AFNetworking.svg?style=style&label=License&maxAge=2592000)](../master/LICENSE)
 
-Copyright (c) 2018-present, harismuneer, Hassaan-Elahi, mahnoorkashif, shafaq15, rmsharks4, marriamsajid                                                        
+Copyright (c) 2018-present, harismuneer, rmsharks4, Hassaan-Elahi, mahnoorkashif, shafaq15, marriamsajid, Software Engineering class of Spring 2018                                                        
