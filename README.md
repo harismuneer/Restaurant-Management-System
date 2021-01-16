@@ -114,7 +114,6 @@ Stuck with some problem? Need help in solution development, guidance, training o
 - Development of Machine Learning/Deep Learning models, and deployment 
 - Web Scraping, Browser Automation, Python Scripting
 <hr>
-<br>
 
 
 ## Contributions Welcome
