@@ -113,7 +113,6 @@ Stuck with some problem? Need help in solution development, guidance, training o
 - Development of Machine Learning/Deep Learning models, and deployment 
 - Web Scraping, Browser Automation, Python Scripting
 <hr>
-<br>
 
 ## ❤️ Support / Donations
 If you or your company use any of my projects, like what I’m doing or have benefited from my projects in any way then kindly consider backing my efforts.
