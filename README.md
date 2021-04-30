@@ -114,23 +114,6 @@ Stuck with some problem? Need help in solution development, guidance, training o
 - Web Scraping, Browser Automation, Python Scripting
 <hr>
 
-## ❤️ Support / Donations
-If you or your company use any of my projects, like what I’m doing or have benefited from my projects in any way then kindly consider backing my efforts.
-
-For donations, you can follow these simple steps:
-
-<b>1)</b> Free signup at <b>[TransferWise](https://transferwise.com/invite/u/harism95)</b> using this link: https://transferwise.com/invite/u/harism95</li>. (Signing up through this link will save you from any transcation fee on the donation)
-
-<b>2)</b> Select the amount e.g (15$) and choose the receiving/recipient's currency to be PKR. It supports multiple payment options (credit card, debit card, wire transfer etc)
-
-<b>3)</b> Then it will show my info as the recipient, select it. If my name isn't shown, then type my email haris.muneer5@gmail.com in recipients.
-
-<b>4)</b> Choose the reason for transfer to the one that suits you the most (in this case it could be 'General expenses') and in the reference section, you can mention 'Support'
- 
-If you face any issue in sending donation then feel free to get in touch with me at haris.muneer5@gmail.com 
-
-Thank you for your contribution!
-
 ## Contributions Welcome
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](#)
 
