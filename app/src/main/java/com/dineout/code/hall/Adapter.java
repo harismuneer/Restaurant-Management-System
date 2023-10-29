@@ -244,17 +244,17 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             TableID.setText("Id: ");
             Capacity.setText(tables.get(position).getCapacity());
             TableCapacity.setText("Capacity: ");
-            if (tables.get(position).getStatus().equals("Booked")) {
+            if ("Booked".equals(tables.get(position).getStatus())) {
                 status.setImageResource(R.drawable.booked);
                 free.setEnabled(true);
                 occupy.setEnabled(false);
                 booked.setEnabled(false);
-            } else if (tables.get(position).getStatus().equals("Occupied")) {
+            } else if ("Occupied".equals(tables.get(position).getStatus())) {
                 status.setImageResource(R.drawable.occupy);
                 free.setEnabled(true);
                 occupy.setEnabled(false);
                 booked.setEnabled(false);
-            } else if (tables.get(position).getStatus().equals("Free")) {
+            } else if ("Free".equals(tables.get(position).getStatus())) {
                 status.setImageResource(R.drawable.free);
                 free.setEnabled(false);
                 occupy.setEnabled(true);
@@ -573,15 +573,15 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             TabletID.setText("Tablet ID: ");
             Status.setText("Status: ");
             s.setText(tablets.get(position).getStatus());
-            if(tablets.get(position).getStatus().equals("In Use"))
+            if("In Use".equals(tablets.get(position).getStatus()))
             {
                 Assign.setEnabled(false);
             }
-            else if(tablets.get(position).getStatus().equals("Broken"))
+            else if("Broken".equals(tablets.get(position).getStatus()))
             {
                 Assign.setEnabled(false);
             }
-            else if(tablets.get(position).getStatus().equals("Issue"))
+            else if("Issue".equals(tablets.get(position).getStatus()))
             {
                 Assign.setEnabled(false);
             }
