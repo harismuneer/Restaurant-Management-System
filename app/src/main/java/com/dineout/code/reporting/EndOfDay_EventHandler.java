@@ -134,27 +134,27 @@ public class EndOfDay_EventHandler
 
     public int GetWeekDayIndex(String w)
     {
-        if(w.equals("Monday"))
+        if("Monday".equals(w))
         {
             return 3;
         }
-        else if(w.equals("Tuesday"))
+        else if("Tuesday".equals(w))
         {
             return 4;
         }
-        else if(w.equals("Wednesday"))
+        else if("Wednesday".equals(w))
         {
             return 5;
         }
-        else if(w.equals("Thursday"))
+        else if("Thursday".equals(w))
         {
             return 6;
         }
-        else if(w.equals("Friday"))
+        else if("Friday".equals(w))
         {
             return 7;
         }
-        else if(w.equals("Saturday"))
+        else if("Saturday".equals(w))
         {
             return 1;
         }
