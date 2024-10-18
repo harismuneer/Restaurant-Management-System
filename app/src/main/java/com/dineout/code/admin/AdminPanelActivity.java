@@ -210,43 +210,41 @@ public class AdminPanelActivity extends AppCompatActivity {
         }
     }
 
-    public void checkdate() {
-        firebaseDatabase = FirebaseDatabase.getInstance(); //FIREBASE DATABASE KA OBJECT GET KIA
+    public void checkDate() {
+    // Get the current date
+    String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
 
-        databaseReference = firebaseDatabase.getReference("Date"); //TABLE LIA
+    // Get the stored date from Firebase Realtime Database
+    DatabaseReference dateReference = FirebaseDatabase.getInstance().getReference("Date");
+    dateReference.addChildEventListener(new ChildEventListener() {
+        @Override
+        public void onChildAdded(DataSnapshot dataSnapshot, String previousKey) {
+            String storedDate = dataSnapshot.getValue(String.class);
 
-        databaseReference.addChildEventListener(new ChildEventListener() {
-            public void onChildAdded(DataSnapshot dataSnapshot, String previousKey) {
+            // Compare the current date with the stored date
+            if (isSameDate(currentDate, storedDate)) {
+                // Update the stored date in Firebase Realtime Database
+                dateReference.child("date").setValue(currentDate);
 
-                date1 = dataSnapshot.getValue(String.class);
-                DateFormat f = new SimpleDateFormat("dd-MM-yyyy");
-                d1 = f.parse(date, new ParsePosition(0));
-                d2 = f.parse(date1, new ParsePosition(0));
-
-                if (d1.compareTo(d2) == 0) {
-                    DatabaseReference ref1 = FirebaseDatabase.getInstance().getReference();
-                    ref1.child("Date").child("date").setValue(date);
-                    checkdb();
-                }
-
-
+                // Check the database for notifications
+                checkDatabase();
             }
+        }
 
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-            }
+        // Other methods of ChildEventListener
+    });
+}
 
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-            }
-
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+private boolean isSameDate(String date1, String date2) {
+    try {
+        DateFormat f = new SimpleDateFormat("dd-MM-yyyy");
+        Date d1 = f.parse(date1);
+        Date d2 = f.parse(date2);
+        return d1.compareTo(d2) == 0;
+    } catch (ParseException e) {
+        return false;
     }
+}
 
     public void checkdb() {
         firebaseDatabase = FirebaseDatabase.getInstance(); //FIREBASE DATABASE KA OBJECT GET KIA
